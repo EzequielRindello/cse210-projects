@@ -7,6 +7,7 @@ class Program
         // Input and Output
         Console.WriteLine("Enter a whole number");
         string x = Console.ReadLine();
+        Console.WriteLine(x);
 
         // String Interpolation
         string school = "BYU-Idaho";
