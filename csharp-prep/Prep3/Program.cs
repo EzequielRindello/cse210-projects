@@ -5,10 +5,10 @@ class Program
     static void Main(string[] args)
     {
         Random randomGenerator = new Random();
-        int ramdom_number = randomGenerator.Next(1, 11);
+        int ramdom_number = randomGenerator.Next(1, 101);
         int guess_count = 0;
         Console.WriteLine("Welcome to the guees game!");
-        Console.WriteLine("Try to guees the magic number between 1 and 10 :) ");
+        Console.WriteLine("Try to guees the magic number between 1 and 100 :) ");
 
         while (true)
         {
