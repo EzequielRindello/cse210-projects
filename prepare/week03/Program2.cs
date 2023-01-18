@@ -13,6 +13,6 @@ class Program2
         PromptGenerator prompt1 = new PromptGenerator();
         var random = new Random();
         int index = random.Next(list.Count);
-        prompt1._prompt =index;
+        prompt1._prompt = index;
     }
 }
