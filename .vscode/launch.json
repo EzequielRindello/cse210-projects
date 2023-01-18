@@ -95,6 +95,19 @@
         },
 
         {
+            "name": "Week03 (Program2)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-prepare-Week03",
+            "program": "${workspaceFolder}/prepare/Week03/bin/Debug/net7.0/Week03.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/prepare/Week03",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+
+        {
             "name": "Learning 03 (Fraction)",
             "type": "coreclr",
             "request": "launch",
