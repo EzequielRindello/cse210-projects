@@ -11,8 +11,10 @@ class Program2
 
 
         PromptGenerator prompt1 = new PromptGenerator();
-        var random = new Random();
-        int index = random.Next(list.Count);
-        prompt1._prompt = index;
+        Random r = new Random();
+        int index = r.Next(list.Count);
+        string randomString = list[index];
+        prompt1._prompt = randomString;
+        prompt1.DisplayPrompt();
     }
 }

@@ -2,8 +2,8 @@ using System;
 
 public class PromptGenerator
 {
-    public int _prompt;
-    public void Display()
+    public string _prompt;
+    public void DisplayPrompt()
     {
        Console.WriteLine(_prompt);
     }
