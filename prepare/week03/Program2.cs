@@ -28,8 +28,6 @@ class Program2
                     break;
             }
 
-
-
         }
 
     }
@@ -49,7 +47,6 @@ class Program2
         "If you are granted a wish, what would you wish for and why? ",
         "How could you make someone you care about feel better if he/she just lost something important to them? " };
 
-
         PromptGenerator prompt1 = new PromptGenerator();
         Random r = new Random();
         int index = r.Next(list.Count);
@@ -57,4 +54,5 @@ class Program2
         prompt1._prompt = randomString;
         prompt1.DisplayPrompt();
     }
+
 }
