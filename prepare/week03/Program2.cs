@@ -34,10 +34,10 @@ class Program2
     static void Menu()
     {
         Console.WriteLine("Please selec one:");
-        Console.WriteLine("1.");
-        Console.WriteLine("2.");
-        Console.WriteLine("3.");
-        Console.WriteLine("4.");
+        Console.WriteLine("1.Write");
+        Console.WriteLine("2.Display");
+        Console.WriteLine("3.Load");
+        Console.WriteLine("4.Save");
         Console.WriteLine("5.Exit");
     }
     static void CaseOne()
