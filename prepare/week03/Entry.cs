@@ -3,8 +3,8 @@ using System;
 public class Entry
 {
     public string _response;
-    public void DisplayResponse()
+    public void getResponse()
     {
-        Console.WriteLine(_response);
+        
     }
 }

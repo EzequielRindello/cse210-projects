@@ -4,6 +4,8 @@ class Program2
 {
     static void Main(string[] args)
     {
+        // Creates a while loop whit a boolean to keep displaying options for the user.
+        // Once the user is done with the program the loop finishes.
         bool valid = false;
         while (valid != true)
         {
@@ -33,6 +35,7 @@ class Program2
     }
     static void Menu()
     {
+        // Display the menu.
         Console.WriteLine("Please selec one:");
         Console.WriteLine("1.Write");
         Console.WriteLine("2.Display");
@@ -42,8 +45,11 @@ class Program2
     }
     static void CaseOne()
     {
+        //
         PromptGenerator prompt = new PromptGenerator();
         prompt.selectPromp();
+        //
+        Entry respose = new Entry();
     }
 
 }
