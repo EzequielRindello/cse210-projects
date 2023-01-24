@@ -5,7 +5,7 @@ public class PromptGenerator
 
     public List<string> _randomPromp = new List<string>();
    
-    public void selectPromp(){
+    public void SelectPromp(){
         _randomPromp.Add("What brings you joy? ");
         _randomPromp.Add("Describe a place where you felt happiest.");
         _randomPromp.Add("If you are granted a wish, what would you wish for and why?");

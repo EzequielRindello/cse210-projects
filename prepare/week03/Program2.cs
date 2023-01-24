@@ -47,7 +47,7 @@ class Program2
     {
         //
         PromptGenerator prompt = new PromptGenerator();
-        prompt.selectPromp();
+        prompt.SelectPromp();
         //
         Entry respose = new Entry();
     }
