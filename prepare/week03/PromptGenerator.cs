@@ -4,6 +4,8 @@ public class PromptGenerator
 {
 
     public List<string> _randomPromp = new List<string>();
+
+    public string _promp;
    
     public void SelectPromp(){
         _randomPromp.Add("What brings you joy? ");
@@ -13,7 +15,8 @@ public class PromptGenerator
         Random r = new Random();
         int index = r.Next(_randomPromp.Count);
         string randomString = _randomPromp[index];
-        Console.WriteLine(randomString);
+        _promp=randomString;
+        Console.WriteLine(_promp);
 
     }
 

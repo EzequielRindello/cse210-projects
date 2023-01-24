@@ -45,10 +45,11 @@ class Program2
     }
     static void CaseOne()
     {
-        //
+        // Generates a random promp and stores in a variable(str).
         PromptGenerator prompt = new PromptGenerator();
         prompt.SelectPromp();
-        //
+        
+        // 
         Entry respose = new Entry();
     }
 
