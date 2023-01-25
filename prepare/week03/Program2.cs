@@ -17,7 +17,7 @@ class Program2
                     CaseOne();
                     break;
                 case "2":
-
+                    Display();
                     break;
                 case "3":
                     break;
