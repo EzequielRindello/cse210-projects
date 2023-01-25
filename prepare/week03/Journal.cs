@@ -2,16 +2,24 @@ using System;
 
 public class Journal
 {
-    public void saveResponse()
+
+    public string _response;
+
+    public string _time;
+
+    public string _promp;
+    public void SaveResponse()
     {
         
     }
-        public void deleteResponse()
+        public void DeleteResponse()
     {
         
     }
-        public void displayResponse()
+        public void DisplayResponse()
     {
-        
+        Console.WriteLine(_time);
+        Console.WriteLine(_promp);
+        Console.WriteLine(_response);
     }   
 }

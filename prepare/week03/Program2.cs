@@ -17,6 +17,7 @@ class Program2
                     CaseOne();
                     break;
                 case "2":
+
                     break;
                 case "3":
                     break;
@@ -45,12 +46,20 @@ class Program2
     }
     static void CaseOne()
     {
-        // Generates a random promp and stores in a variable(str).
+        // Generates a random promp and stores in a variable(str)
         PromptGenerator prompt = new PromptGenerator();
         prompt.SelectPromp();
-        
-        // 
-        Entry respose = new Entry();
-    }
 
+
+        //
+        Entry response1 = new Entry();
+        response1.GetResponse();
+
+    }
+    static void Display()
+    {
+      Journal display1 = new Journal();
+      display1.DisplayResponse();
+
+    }
 }
