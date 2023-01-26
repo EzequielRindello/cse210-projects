@@ -48,10 +48,8 @@ class Program2
     {
         // Generates a random promp and stores in a variable(str)
         PromptGenerator prompt = new PromptGenerator();
-        prompt.SelectPromp();
-
-
-        //
+        string randomPromp = prompt.SelectPromp();
+        // Return the respose
         Entry response1 = new Entry();
         response1.GetResponse();
 

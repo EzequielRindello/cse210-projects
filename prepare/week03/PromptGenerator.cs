@@ -4,8 +4,8 @@ public class PromptGenerator
 {
 
     public List<string> _randomPromp = new List<string>();
-    public string _promp;
-    public void SelectPromp()
+    
+    public string SelectPromp()
     {
         _randomPromp.Add("What brings you joy? ");
         _randomPromp.Add("Describe a place where you felt happiest.");
@@ -14,8 +14,9 @@ public class PromptGenerator
         Random r = new Random();
         int index = r.Next(_randomPromp.Count);
         string randomString = _randomPromp[index];
-        _promp = randomString;
-        Console.WriteLine(_promp);
+        
+        Console.WriteLine(randomString);
+        return randomString;
     }
 
 }
