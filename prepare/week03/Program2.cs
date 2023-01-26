@@ -84,7 +84,7 @@ class Program2
     {
         // Saves the prompt, the user response and time into a file.
         Journal myFile = new Journal();
-        myFile.SaveFile();
+        myFile.SaveFile(prompt,userResponse,date_str);
     }
 
 }
