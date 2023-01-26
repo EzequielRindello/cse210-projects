@@ -9,7 +9,7 @@ class Program2
         bool valid = false;
         string prompt = "";
         string userResponse = "";
-        string time = "";
+        string date_str = "";
         // Creates a while loop whit a boolean to keep displaying options for the user.
         // Once the user is done with the program the loop finishes.
         while (valid != true)
@@ -21,10 +21,10 @@ class Program2
                 case "1":
                     prompt = PromptGenerator();
                     userResponse = GetResponse();
-                    time = GetTime();
+                    date_str = GetTime();
                     break;
                 case "2":
-                    Display(prompt, userResponse);
+                    Display(prompt, userResponse, date_str);
                     break;
                 case "3":
                     break;
@@ -67,13 +67,16 @@ class Program2
     }
     static string GetTime()
     {
-        return null;
+        // Gets and return time.
+        Entry time = new Entry();
+        string date_str = time.Time();
+        return date_str;
     }
-    static string Display(string prompt, string userResponse)
+    static string Display(string prompt, string userResponse, string date_str)
     {
         // Display the prompt, the user response and time.
         Journal display1 = new Journal();
-        display1.DisplayResponse(prompt, userResponse);
+        display1.DisplayResponse(prompt, userResponse, date_str);
         return null;
     }
 }
