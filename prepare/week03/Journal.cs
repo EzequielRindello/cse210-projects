@@ -16,9 +16,9 @@ public class Journal
     {
         
     }
-        public void DisplayResponse(string x,string z)
+        public void DisplayResponse(string x,string z,string y)
     {
-       // Console.WriteLine(_time);
+        Console.WriteLine(y);
         Console.WriteLine(x);
         Console.WriteLine(z);
     }   
