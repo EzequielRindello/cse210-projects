@@ -50,8 +50,8 @@ class Program2
         PromptGenerator prompt = new PromptGenerator();
         string randomPromp = prompt.SelectPromp();
         // Return the respose
-        Entry response1 = new Entry();
-        response1.GetResponse();
+        Entry response = new Entry();
+        string answer=response.GetResponse();
 
     }
     static void Display()
