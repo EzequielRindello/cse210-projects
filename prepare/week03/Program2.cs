@@ -65,7 +65,6 @@ class Program2
         string answer = response.GetResponse();
         return answer;
     }
-
     static string GetTime()
     {
         return null;

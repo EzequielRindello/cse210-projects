@@ -18,5 +18,5 @@ public class PromptGenerator
         Console.WriteLine(randomString);
         return randomString;
     }
-
+    
 }
