@@ -14,7 +14,8 @@ class Program2
             switch (answer)
             {
                 case "1":
-                    CaseOne();
+                    string prompt=PromptGenerator();
+                    string userAnswer=GetResponse();
                     break;
                 case "2":
                     Display();
@@ -44,16 +45,20 @@ class Program2
         Console.WriteLine("4.Save");
         Console.WriteLine("5.Exit");
     }
-    static void CaseOne()
+    static string PromptGenerator()
     {
         // Generates a random promp and stores in a variable(str)
         PromptGenerator prompt = new PromptGenerator();
         string randomPromp = prompt.SelectPromp();
+        return randomPromp;
+    }
+    static string GetResponse(){
         // Return the respose
         Entry response = new Entry();
         string answer=response.GetResponse();
-
+        return answer;
     }
+
     static void Display()
     {
       Journal display1 = new Journal();
