@@ -51,14 +51,14 @@ class Program2
     }
     static string PromptGenerator()
     {
-        // Generates a random promp and stores in a variable(str)
+        // Generates a random promp and stores in a variable(str).
         PromptGenerator prompt = new PromptGenerator();
         string randomPromp = prompt.SelectPromp();
         return randomPromp;
     }
     static string GetResponse()
     {
-        // Return the respose
+        //Ask for an input eturn the respose.
         Entry response = new Entry();
         string answer = response.GetResponse();
         return answer;
