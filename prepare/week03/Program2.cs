@@ -29,6 +29,7 @@ class Program2
                 case "3":
                     break;
                 case "4":
+                    SaveToFile(prompt, userResponse, date_str);
                     break;
                 case "5":
                     valid = true;
@@ -72,11 +73,17 @@ class Program2
         string date_str = time.Time();
         return date_str;
     }
-    static string Display(string prompt, string userResponse, string date_str)
+    static void Display(string prompt, string userResponse, string date_str)
     {
         // Display the prompt, the user response and time.
         Journal display1 = new Journal();
         display1.DisplayResponse(prompt, userResponse, date_str);
-        return null;
     }
+    static void SaveToFile(string prompt, string userResponse, string date_str)
+    {
+        // Saves the prompt, the user response and time into a file.
+        Journal myFile = new Journal();
+        myFile.SaveResponse();
+    }
+
 }
