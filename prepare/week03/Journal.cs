@@ -16,10 +16,10 @@ public class Journal
     {
         
     }
-        public void DisplayResponse()
+        public void DisplayResponse(string x,string z)
     {
-        Console.WriteLine(_time);
-        Console.WriteLine(_promp);
-        Console.WriteLine(_response);
+       // Console.WriteLine(_time);
+        Console.WriteLine(x);
+        Console.WriteLine(z);
     }   
 }

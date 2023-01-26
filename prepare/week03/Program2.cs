@@ -4,9 +4,13 @@ class Program2
 {
     static void Main(string[] args)
     {
+
+        // Global variables.
+        bool valid = false;
+        string prompt="";
+        string userAnswer="";
         // Creates a while loop whit a boolean to keep displaying options for the user.
         // Once the user is done with the program the loop finishes.
-        bool valid = false;
         while (valid != true)
         {
             Menu();
@@ -14,11 +18,11 @@ class Program2
             switch (answer)
             {
                 case "1":
-                    string prompt=PromptGenerator();
-                    string userAnswer=GetResponse();
+                    prompt = PromptGenerator();
+                    userAnswer = GetResponse();
                     break;
                 case "2":
-                    Display();
+                    Display(prompt, userAnswer);
                     break;
                 case "3":
                     break;
@@ -52,17 +56,18 @@ class Program2
         string randomPromp = prompt.SelectPromp();
         return randomPromp;
     }
-    static string GetResponse(){
+    static string GetResponse()
+    {
         // Return the respose
         Entry response = new Entry();
-        string answer=response.GetResponse();
+        string answer = response.GetResponse();
         return answer;
     }
 
-    static void Display()
+    static string Display(string prompt, string userAnswer)
     {
-      Journal display1 = new Journal();
-      display1.DisplayResponse();
-
+        Journal display1 = new Journal();
+        display1.DisplayResponse(prompt, userAnswer);
+        return null;
     }
 }

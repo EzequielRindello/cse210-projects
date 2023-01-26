@@ -6,7 +6,7 @@ public class Entry
     public string GetResponse()
     {
         string valid=Console.ReadLine();
-        valid=_response;
+        _response=valid;
         return _response;
     }
 }
