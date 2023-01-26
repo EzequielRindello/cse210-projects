@@ -16,6 +16,7 @@ public class Entry
     {
         DateTime timeOnly = new DateTime(DateTime.Now.TimeOfDay.Ticks);
         string date_str = timeOnly.ToString("dd/MM/yyyy HH:mm:ss");
-        return date_str;
+        _time=date_str;
+        return _time;
     }
 }
