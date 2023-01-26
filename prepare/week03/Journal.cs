@@ -7,13 +7,16 @@ public class Journal
     public string _promp;
     public void SaveFile()
     {
-
+        
     }
     public void DeleteResponses()
     {
 
     }
-    public void LoadFile
+    public void LoadFile()
+    {
+
+    }
     public void DisplayResponse(string x, string z, string y)
     {
         Console.WriteLine(y);
