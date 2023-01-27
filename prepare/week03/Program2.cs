@@ -59,9 +59,9 @@ class Program2
     }
     static void Instructions()
     {
-        Console.WriteLine("Every time you enter you can save the answers you want");
-        Console.WriteLine("but you should always upload the .txt file so as not to overwrite the responses.");
-        Console.WriteLine("THIS IS IMPORTANT BECAUSE IF YOU DO NOT LOAD THE FILE YOUR PREVIOUS ANSWERS WILL BE DELETED AND YOU WILL NOT BE ABLE TO RECOVER THEM");
+        Console.WriteLine("Every time you enter you can save the answers you want but you should");
+        Console.WriteLine("always upload the .txt file so as not to overwrite the responses.");
+        Console.WriteLine("THIS IS IMPORTANT BECAUSE IF YOU DO NOT LOAD THE FILE YOUR PREVIOUS ANSWERS WILL BE DELETED AND YOU WILL NOT BE ABLE TO RECOVER THEM.");
         Console.WriteLine("We recommend you always do the steps in this order, 3 => 2 => to check and then use normally.");
     }
     static string PromptGenerator()
