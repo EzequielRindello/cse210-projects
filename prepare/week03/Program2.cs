@@ -33,16 +33,16 @@ class Program2
                     Display(journal);
                     break;
                 case "3":
-                    journal=Load();
+                    journal = Load();
                     break;
                 case "4":
                     SaveToFile(journal);
                     break;
                 case "5":
-                    valid = true;
+                    Instructions();
                     break;
-                default:
-                    Console.Write("Error.");
+                case "6":
+                    valid = true;
                     break;
             }
 
@@ -57,7 +57,15 @@ class Program2
         Console.WriteLine("2.Display");
         Console.WriteLine("3.Load");
         Console.WriteLine("4.Save");
-        Console.WriteLine("5.Exit");
+        Console.WriteLine("5.Instructions");
+        Console.WriteLine("6.Exit");
+    }
+    static void Instructions()
+    {
+        Console.WriteLine("Every time you enter you can save the answers you want");
+        Console.WriteLine("but you should always upload the .txt file so as not to overwrite the responses.");
+        Console.WriteLine("THIS IS IMPORTANT BECAUSE IF YOU DO NOT LOAD THE FILE YOUR PREVIOUS ANSWERS WILL BE DELETED AND YOU WILL NOT BE ABLE TO RECOVER THEM");
+        Console.WriteLine("We recommend you always do the steps in this order, 3 => 2 => to check and then use normally.");
     }
     static string PromptGenerator()
     {
@@ -93,6 +101,7 @@ class Program2
         myFile.SaveFile(journal);
     }
     static List<string> Load()
+    // Load the a file.
     {
         Journal load = new Journal();
         List<string> loadList = load.LoadFile();

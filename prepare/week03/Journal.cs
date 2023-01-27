@@ -22,7 +22,7 @@ public class Journal
     }
     public void DeleteResponses()
     {
-
+        
     }
     public List<string> LoadFile()
     {
