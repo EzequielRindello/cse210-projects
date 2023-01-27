@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.IO; 
+using System.IO;
 class Program2
 {
     static void Main(string[] args)
@@ -11,7 +11,7 @@ class Program2
         string prompt = "";
         string userResponse = "";
         string date_str = "";
-        List<string>journal=new List<string>();
+        List<string> journal = new List<string>();
         // Creates a while loop whit a boolean to keep displaying options for the user.
         // Once the user is done with the program the loop finishes.
         while (valid != true)
@@ -27,12 +27,13 @@ class Program2
                     journal.Add(date_str);
                     journal.Add(prompt);
                     journal.Add(userResponse);
+                    journal.Add("");
                     break;
                 case "2":
                     Display(journal);
                     break;
                 case "3":
-                    
+                    journal=Load();
                     break;
                 case "4":
                     SaveToFile(journal);
@@ -91,5 +92,10 @@ class Program2
         Journal myFile = new Journal();
         myFile.SaveFile(journal);
     }
-
+    static List<string> Load()
+    {
+        Journal load = new Journal();
+        List<string> loadList = load.LoadFile();
+        return loadList;
+    }
 }

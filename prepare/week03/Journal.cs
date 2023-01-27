@@ -16,7 +16,6 @@ public class Journal
             {
                 string line = journal[i];
                 outputFile.WriteLine(line);
-                outputFile.WriteLine();
             }
         }
 
@@ -25,11 +24,14 @@ public class Journal
     {
 
     }
-    public void LoadFile()
+    public List<string> LoadFile()
     {
         // Sould be myFile.txt
         Console.WriteLine("What it's your filename:");
         string filename = Console.ReadLine();
+        var logFile = File.ReadAllLines(filename);
+        var logList = new List<string>(logFile);    
+        return logList;
 
     }
     public void DisplayResponse(List<string> journal)
