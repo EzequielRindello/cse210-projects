@@ -13,7 +13,7 @@ public class PromptGenerator
         Random r = new Random();
         int index = r.Next(_randomPromp.Count);
         string randomString = _randomPromp[index];
-        _promp=randomString;
+        _promp = randomString;
         Console.WriteLine(_promp);
         return _promp;
     }
