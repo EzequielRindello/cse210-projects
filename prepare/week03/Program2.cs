@@ -11,6 +11,7 @@ class Program2
         string prompt = "";
         string userResponse = "";
         string date_str = "";
+        List<string>journal=new List<string>();
         // Creates a while loop whit a boolean to keep displaying options for the user.
         // Once the user is done with the program the loop finishes.
         while (valid != true)
@@ -23,14 +24,18 @@ class Program2
                     prompt = PromptGenerator();
                     userResponse = GetResponse();
                     date_str = GetTime();
+                    journal.Add(date_str);
+                    journal.Add(prompt);
+                    journal.Add(userResponse);
                     break;
                 case "2":
-                    Display(prompt, userResponse, date_str);
+                    Display(journal);
                     break;
                 case "3":
+                    
                     break;
                 case "4":
-                    SaveToFile(prompt, userResponse, date_str);
+                    SaveToFile(journal);
                     break;
                 case "5":
                     valid = true;
@@ -74,17 +79,17 @@ class Program2
         string date_str = time.Time();
         return date_str;
     }
-    static void Display(string prompt, string userResponse, string date_str)
+    static void Display(List<string> journal)
     {
         // Display the prompt, the user response and time.
         Journal display1 = new Journal();
-        display1.DisplayResponse(prompt, userResponse, date_str);
+        display1.DisplayResponse(journal);
     }
-    static void SaveToFile(string prompt, string userResponse, string date_str)
+    static void SaveToFile(List<string> journal)
     {
         // Saves the prompt, the user response and time into a file.
         Journal myFile = new Journal();
-        myFile.SaveFile(prompt,userResponse,date_str);
+        myFile.SaveFile(journal);
     }
 
 }

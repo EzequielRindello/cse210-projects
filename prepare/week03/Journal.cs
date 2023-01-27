@@ -3,18 +3,21 @@ using System.IO;
 
 public class Journal
 {
-    
-    public void SaveFile(string a, string b, string c)
+
+    public void SaveFile(List<string> journal)
     {
         // Sould be myFile.txt
         Console.WriteLine("What it's your filename:");
         string filename = Console.ReadLine();
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
-            // Add responses.
-            outputFile.WriteLine(c);
-            outputFile.WriteLine(a);
-            outputFile.WriteLine(b);
+
+            for (int i = 0; i < journal.Count; i++)
+            {
+                string line = journal[i];
+                outputFile.WriteLine(line);
+                outputFile.WriteLine();
+            }
         }
 
     }
@@ -27,12 +30,13 @@ public class Journal
         // Sould be myFile.txt
         Console.WriteLine("What it's your filename:");
         string filename = Console.ReadLine();
-        
+
     }
-    public void DisplayResponse(string x, string z, string y)
+    public void DisplayResponse(List<string> journal)
     {
-        Console.WriteLine(y);
-        Console.WriteLine(x);
-        Console.WriteLine(z);
+        for (int i = 0; i < journal.Count; i++)
+        {
+            Console.WriteLine(journal[i]);
+        }
     }
 }
