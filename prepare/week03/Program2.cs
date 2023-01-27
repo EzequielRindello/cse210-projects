@@ -5,7 +5,6 @@ class Program2
 {
     static void Main(string[] args)
     {
-
         // Global variables.
         bool valid = false;
         string prompt = "";
@@ -45,9 +44,7 @@ class Program2
                     valid = true;
                     break;
             }
-
         }
-
     }
     static void Menu()
     {
