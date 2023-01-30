@@ -108,7 +108,7 @@
         },
 
         {
-            "name": "Learning 03 (Fraction)",
+            "name": "Learning 03 (Program)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build-prepare-Learning03",

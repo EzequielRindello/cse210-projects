@@ -111,6 +111,23 @@
         },
 
         {
+            "label": "build-prepare-Learning03",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/prepare/Learning03/Learning03.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+
+        {
             "label": "build-prepare-Learning04",
             "command": "dotnet",
             "type": "process",
