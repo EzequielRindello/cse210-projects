@@ -95,13 +95,13 @@
         },
 
         {
-            "name": "Week03 (Program2)",
+            "name": "Week04 (Program2)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build-prepare-Week03",
-            "program": "${workspaceFolder}/prepare/Week03/bin/Debug/net7.0/Week03.dll",
+            "preLaunchTask": "build-prepare-Week04",
+            "program": "${workspaceFolder}/prepare/Week04/bin/Debug/net7.0/Week03.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/prepare/Week03",
+            "cwd": "${workspaceFolder}/prepare/Week04",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
