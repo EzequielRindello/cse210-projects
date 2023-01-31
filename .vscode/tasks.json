@@ -77,12 +77,12 @@
         },
 
         {
-            "label": "build-prepare-Week03",
+            "label": "build-prepare-Week04",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/prepare/Week03/Week03.csproj",
+                "${workspaceFolder}/prepare/Week04/Week03.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
