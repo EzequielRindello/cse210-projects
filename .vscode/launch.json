@@ -108,6 +108,19 @@
         },
 
         {
+            "name": "Week06 (Program)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-prepare-Week06",
+            "program": "${workspaceFolder}/prepare/Week06/bin/Debug/net7.0/Week06.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/prepare/Week06",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+
+        {
             "name": "Learning 03 (Program)",
             "type": "coreclr",
             "request": "launch",
