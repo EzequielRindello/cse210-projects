@@ -4,19 +4,25 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Input and Output
-        Console.WriteLine("Enter a whole number");
-        string x = Console.ReadLine();
-        Console.WriteLine(x);
+        var rand = new Random();
+        string[] movies = { "deadpool", "batmanvssuperman", "findingdory", "titanic", "suicidesquad", "lordoftherings", "harrypotter", "jurassicpark", "hungergames", "despicableme" };
+        List<string> randomMovies = movies.ToList();
 
-        // String Interpolation
-        string school = "BYU-Idaho";
-        Console.WriteLine($"I am studying at {school}.");
-        // or...
-        Console.WriteLine("I am studying at " + school + ".");
+        for (int i = 0; i < movies.Length / 2; i++)
+        {
+            var randNum = rand.Next(i, randomMovies.Count);
+            var temp = randomMovies[randNum];
+            randomMovies[randNum] = randomMovies[i];
+            randomMovies[i] = temp;
+        }
 
-        //
+        var randomMovie = randomMovies.First();
+        randomMovies.Remove(randomMovie);
 
-
+        Console.Clear();
+        for (int i = 0; i < randomMovies.Count; i++)
+        {
+            Console.WriteLine(randomMovies[i]);
+        }
     }
 }
