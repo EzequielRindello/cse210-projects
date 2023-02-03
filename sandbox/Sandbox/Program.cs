@@ -9,11 +9,26 @@ class Program
         , "not ", "unto ", "thine ", "own ", "understanding.", "In ", "all ", "thy ", "ways ",
         "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths." };
 
-        NewList(Proverbs);
-        DisplayList(Proverbs);
-        Console.WriteLine();
-        NewList(Proverbs);
-        DisplayList(Proverbs);
+        while (true)
+        {
+            Console.Clear();
+            DisplayList(Proverbs);
+            Console.WriteLine();
+            Console.WriteLine("Press enter to continue or tipe 'quit' to finish");
+            string input = Console.ReadLine();
+            if (input == "")
+            {
+                Proverbs= NewList(Proverbs);
+            }
+            else if (input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
+            {
+                break;
+            }
+            else
+            {
+              Console.WriteLine("Error.");  
+            }
+        }
 
     }
 
