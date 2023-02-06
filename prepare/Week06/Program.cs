@@ -3,25 +3,36 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Original scripture
+        List<string> proverbs = new List<string>() { "Trust ", "in ", "the ", "Lord ", "with ", "all ", "thine ", "heart;", " and ", "lean "
+        , "not ", "unto ", "thine ", "own ", "understanding.", "In ", "all ", "thy ", "ways ",
+        "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths." };
+
         while (true)
         {
             Console.Clear();
-            Scripture display= new Scripture();
-            display.DisplayList();
+
+            Reference full_scripture = new Reference("Proverbs", 3, "5-6");
+            full_scripture.DisplayInfo();
+
+            Scripture display_scripture = new Scripture(proverbs);
+            display_scripture.DisplayList();
+
             Console.WriteLine();
             Console.WriteLine("Press enter to continue or tipe 'quit' to finish");
-            string input = Console.ReadLine();
-            if (input == "")
+            string user_input = Console.ReadLine();
+            if (user_input == "")
             {
+
                 //Proverbs= NewList(Proverbs);
             }
-            else if (input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
+            else if (user_input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
             {
                 break;
             }
             else
             {
-              Console.WriteLine("Error.");  
+                Console.WriteLine("Error.");
             }
         }
 
