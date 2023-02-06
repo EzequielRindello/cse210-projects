@@ -14,11 +14,8 @@ public class Scripture
             Console.Write(x);
         }
     }
-
-    
-
-
-
-
-
+    public void IsCompletelyHidden()
+    {
+        
+    }
 }
