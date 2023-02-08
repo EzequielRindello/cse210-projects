@@ -24,7 +24,7 @@ class Program
             if (user_input == "")
             {
                 Word new_list= new Word(proverbs);
-                proverbs=new_list.SelectRandomWords(proverbs);
+                proverbs=new_list.ReplaceRandomWords(proverbs);
                 
             }
             else if (user_input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))

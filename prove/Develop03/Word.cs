@@ -9,28 +9,21 @@ public class Word
     {
         _proverbs=proverbs;
     }
-
-    public List<string> SelectRandomWords(List<string> _proverbs)
+    public List<string> ReplaceRandomWords(List<string> _proverbs)
     {
         var random = new Random();
         int index = random.Next(_proverbs.Count);
         string randomString = _proverbs[index];
         HashSet<string> discovered = new HashSet<string>(StringComparer.InvariantCultureIgnoreCase);
         discovered.Add(randomString);
-        string convertWord = ConvertWord(randomString, discovered);
+        _wordToReplace = ConvertWord(randomString, discovered);
         int valid = _proverbs.FindIndex(s => s == randomString);
         if (valid != -1)
         {
-            _proverbs[valid] = convertWord;
+            _proverbs[valid] = _wordToReplace;
         }
         return _proverbs;
     }
-
-    public void ReplaceWords()
-    {
-
-    }
-
     static string ConvertWord(string word, HashSet<string> discovered)
     {
         return string.Concat(word.Select(p => discovered.Contains(p.ToString()) ? p : '_'));
