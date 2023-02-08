@@ -95,32 +95,6 @@
         },
 
         {
-            "name": "Week04 (Program2)",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build-prepare-Week04",
-            "program": "${workspaceFolder}/prepare/Week04/bin/Debug/net7.0/Week03.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/prepare/Week04",
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "stopAtEntry": false
-        },
-
-        {
-            "name": "Week06 (Program)",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build-prepare-Week06",
-            "program": "${workspaceFolder}/prepare/Week06/bin/Debug/net7.0/Week06.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/prepare/Week06",
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "stopAtEntry": false
-        },
-
-        {
             "name": "Learning 03 (Program)",
             "type": "coreclr",
             "request": "launch",

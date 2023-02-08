@@ -23,8 +23,9 @@ class Program
             string user_input = Console.ReadLine();
             if (user_input == "")
             {
-
-                //Proverbs= NewList(Proverbs);
+                Word new_list= new Word(proverbs);
+                proverbs=new_list.SelectRandomWords(proverbs);
+                
             }
             else if (user_input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -38,24 +39,4 @@ class Program
 
     }
 
-    public static List<string> NewList(List<string> Proverbs)
-    {
-        var random = new Random();
-        int index = random.Next(Proverbs.Count);
-        string randomString = Proverbs[index];
-        HashSet<string> discovered = new HashSet<string>(StringComparer.InvariantCultureIgnoreCase);
-        discovered.Add(randomString);
-        string convertWord = ConvertWord(randomString, discovered);
-        int valid = Proverbs.FindIndex(s => s == randomString);
-        if (valid != -1)
-        {
-            Proverbs[valid] = convertWord;
-        }
-
-        return Proverbs;
-    }
-    static string ConvertWord(string word, HashSet<string> discovered)
-    {
-        return string.Concat(word.Select(p => discovered.Contains(p.ToString()) ? p : '_'));
-    }
 }
