@@ -7,7 +7,7 @@ public class Word
 
     public Word(List<string> proverbs)
     {
-        _proverbs=proverbs;
+        _proverbs = proverbs;
     }
     public List<string> ReplaceRandomWords(List<string> _proverbs)
     {

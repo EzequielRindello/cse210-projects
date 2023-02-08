@@ -3,40 +3,41 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Original scripture
+        // Original scripture.
         List<string> proverbs = new List<string>() { "Trust ", "in ", "the ", "Lord ", "with ", "all ", "thine ", "heart;", " and ", "lean "
         , "not ", "unto ", "thine ", "own ", "understanding.", "In ", "all ", "thy ", "ways ",
         "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths." };
-
+        // Main loop for the program.
         while (true)
         {
+            //Clear the console.
             Console.Clear();
-
+            // Creates the name of the scripture.
             Reference full_scripture = new Reference("Proverbs", 3, "5-6");
             full_scripture.DisplayInfo();
-
+            // Display either the Original scripture or the hidden version.
             Scripture display_scripture = new Scripture(proverbs);
             display_scripture.DisplayList();
-
+            // Ask the user specific input.
             Console.WriteLine();
             Console.WriteLine("Press enter to continue or tipe 'quit' to finish");
             string user_input = Console.ReadLine();
             if (user_input == "")
             {
-                Word new_list= new Word(proverbs);
-                proverbs=new_list.ReplaceRandomWords(proverbs);
-                
+                // Select random words and replace it.
+                Word new_list = new Word(proverbs);
+                proverbs = new_list.ReplaceRandomWords(proverbs);
             }
             else if (user_input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
             {
+                // Stops the program.
                 break;
             }
             else
             {
+                // Handle exceptions.
                 Console.WriteLine("Error.");
             }
         }
-
     }
-
 }

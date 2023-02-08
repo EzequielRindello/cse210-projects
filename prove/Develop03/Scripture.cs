@@ -16,6 +16,6 @@ public class Scripture
     }
     public void IsCompletelyHidden()
     {
-        
+
     }
 }
