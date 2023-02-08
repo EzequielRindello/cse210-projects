@@ -7,7 +7,7 @@ public class Scripture
     {
         _proverbs = Proverbs;
     }
-    public void DisplayList()
+    public void DisplayScripture()
     {
         foreach (var x in _proverbs)
         {
@@ -16,6 +16,6 @@ public class Scripture
     }
     public void IsCompletelyHidden()
     {
-
+        
     }
 }

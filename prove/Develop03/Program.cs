@@ -7,8 +7,10 @@ class Program
         List<string> proverbs = new List<string>() { "Trust ", "in ", "the ", "Lord ", "with ", "all ", "thine ", "heart;", " and ", "lean "
         , "not ", "unto ", "thine ", "own ", "understanding.", "In ", "all ", "thy ", "ways ",
         "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths." };
+        //  Parametrer for the main loop.
+        bool valid = false;
         // Main loop for the program.
-        while (true)
+        while (!valid)
         {
             //Clear the console.
             Console.Clear();
@@ -17,7 +19,7 @@ class Program
             full_scripture.DisplayInfo();
             // Display either the Original scripture or the hidden version.
             Scripture display_scripture = new Scripture(proverbs);
-            display_scripture.DisplayList();
+            display_scripture.DisplayScripture();
             // Ask the user specific input.
             Console.WriteLine();
             Console.WriteLine("Press enter to continue or tipe 'quit' to finish");
@@ -31,7 +33,7 @@ class Program
             else if (user_input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
             {
                 // Stops the program.
-                break;
+                valid = true;
             }
             else
             {
