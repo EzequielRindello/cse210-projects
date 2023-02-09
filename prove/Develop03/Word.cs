@@ -14,15 +14,20 @@ public class Word
         var random = new Random();
         int index = random.Next(_proverbs.Count);
         string randomString = _proverbs[index];
-        HashSet<string> discovered = new HashSet<string>(StringComparer.InvariantCultureIgnoreCase);
-        discovered.Add(randomString);
-        _wordToReplace = ConvertWord(randomString, discovered);
-        int valid = _proverbs.FindIndex(s => s == randomString);
-        if (valid != -1)
+        if (randomString!=" ")
         {
-            _proverbs[valid] = _wordToReplace;
+            HashSet<string> discovered = new HashSet<string>(StringComparer.InvariantCultureIgnoreCase);
+            discovered.Add(randomString);
+            _wordToReplace = ConvertWord(randomString, discovered);
+            int valid = _proverbs.FindIndex(s => s == randomString);
+            if (valid != -1)
+            {
+                _proverbs[valid] = _wordToReplace;
+            }
+        
         }
         return _proverbs;
+
     }
     private string ConvertWord(string word, HashSet<string> discovered)
     {

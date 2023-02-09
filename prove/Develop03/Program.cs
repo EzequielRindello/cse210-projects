@@ -26,7 +26,12 @@ class Program
             {
                 // Select random words and replace it.
                 Word new_list = new Word(proverbs);
-                proverbs = new_list.ReplaceRandonWord(proverbs);
+                // I choose 8 because it has to select and ignore white spaces!
+                for (int i = 0; i < 8; i++)
+                {
+                    proverbs = new_list.ReplaceRandonWord(proverbs);
+                }
+
             }
             else if (user_input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -42,9 +47,9 @@ class Program
     }
     public static List<string> CreateVerse()
     {
-        List<string> x = new List<string>() { "Trust ", "in ", "the ", "Lord ", "with ", "all ", "thine ", "heart;", " and ", "lean "
-        , "not ", "unto ", "thine ", "own ", "understanding.", "In ", "all ", "thy ", "ways ",
-        "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths." };
+        List<string> x = new List<string>() {"Trust"," ","in"," ","the"," ","Lord"," ","with"," ","all"," ","thine"," ","heart;"," ","and"," ", "lean"
+        ," ","not"," ","unto"," ","thine"," ", "own"," ","understanding."," ","In"," ","all"," ","thy"," ","ways",
+        " ","acknowledge"," ", "him,"," ", "and"," ", "he"," ", "shall"," ", "direct"," ", "thy"," ", "paths." };
         return x;
     }
 }
