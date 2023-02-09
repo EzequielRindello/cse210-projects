@@ -4,9 +4,7 @@ class Program
     static void Main(string[] args)
     {
         // Original scripture.
-        List<string> proverbs = new List<string>() { "Trust ", "in ", "the ", "Lord ", "with ", "all ", "thine ", "heart;", " and ", "lean "
-        , "not ", "unto ", "thine ", "own ", "understanding.", "In ", "all ", "thy ", "ways ",
-        "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths." };
+        List<string> proverbs = CreateVerse();
         //  Parametrer for the main loop.
         bool valid = false;
         // Main loop for the program.
@@ -41,5 +39,12 @@ class Program
                 Console.WriteLine("Error.");
             }
         }
+    }
+    public static List<string> CreateVerse()
+    {
+        List<string> x = new List<string>() { "Trust ", "in ", "the ", "Lord ", "with ", "all ", "thine ", "heart;", " and ", "lean "
+        , "not ", "unto ", "thine ", "own ", "understanding.", "In ", "all ", "thy ", "ways ",
+        "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths." };
+        return x;
     }
 }
