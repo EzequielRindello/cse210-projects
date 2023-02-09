@@ -24,7 +24,7 @@ public class Word
         }
         return _proverbs;
     }
-    static string ConvertWord(string word, HashSet<string> discovered)
+    private string ConvertWord(string word, HashSet<string> discovered)
     {
         return string.Concat(word.Select(p => discovered.Contains(p.ToString()) ? p : '_'));
     }
