@@ -1,63 +1,50 @@
 using System;
-
 class Program
 {
     static void Main(string[] args)
     {
-
-        List<string> Proverbs = new List<string>() { "Trust ", "in ", "the ", "Lord ", "with ", "all ", "thine ", "heart;", " and ", "lean "
-        , "not ", "unto ", "thine ", "own ", "understanding.", "In ", "all ", "thy ", "ways ",
-        "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths." };
-
-        while (true)
+        // Original scripture.
+        List<string> proverbs = CreateVerse();
+        //  Parametrer for the main loop.
+        bool valid = false;
+        // Main loop for the program.
+        while (!valid)
         {
+            //Clear the console.
             Console.Clear();
-            DisplayList(Proverbs);
+            // Creates the name of the scripture.
+            Reference full_scripture = new Reference("Proverbs", 3, "5-6");
+            full_scripture.DisplayInfo();
+            // Display either the Original scripture or the hidden version.
+            Scripture display_scripture = new Scripture(proverbs);
+            display_scripture.DisplayScripture();
+            // Ask the user specific input.
             Console.WriteLine();
             Console.WriteLine("Press enter to continue or tipe 'quit' to finish");
-            string input = Console.ReadLine();
-            if (input == "")
+            string user_input = Console.ReadLine();
+            if (user_input == "")
             {
-                Proverbs= NewList(Proverbs);
+                // Select random words and replace it.
+                Word new_list = new Word(proverbs);
+                proverbs = new_list.ReplaceRandonWord(proverbs);
             }
-            else if (input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
+            else if (user_input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
             {
-                break;
+                // Stops the program.
+                valid = true;
             }
             else
             {
-              Console.WriteLine("Error.");  
+                // Handle exceptions.
+                Console.WriteLine("Error.");
             }
         }
-
     }
-
-    public static List<string> NewList(List<string> Proverbs)
+    public static List<string> CreateVerse()
     {
-        var random = new Random();
-        int index = random.Next(Proverbs.Count);
-        string randomString = Proverbs[index];
-        HashSet<string> discovered = new HashSet<string>(StringComparer.InvariantCultureIgnoreCase);
-        discovered.Add(randomString);
-        string convertWord = ConvertWord(randomString, discovered);
-        int valid = Proverbs.FindIndex(s => s == randomString);
-        if (valid != -1)
-        {
-            Proverbs[valid] = convertWord;
-        }
-
-        return Proverbs;
+        List<string> x = new List<string>() { "Trust ", "in ", "the ", "Lord ", "with ", "all ", "thine ", "heart;", " and ", "lean "
+        , "not ", "unto ", "thine ", "own ", "understanding.", "In ", "all ", "thy ", "ways ",
+        "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths." };
+        return x;
     }
-    public static void DisplayList(List<string> Proverbs)
-    {
-        foreach (var x in Proverbs)
-        {
-            Console.Write(x);
-        }
-    }
-    static string ConvertWord(string word, HashSet<string> discovered)
-    {
-        return string.Concat(word.Select(p => discovered.Contains(p.ToString()) ? p : '_'));
-    }
-
 }
