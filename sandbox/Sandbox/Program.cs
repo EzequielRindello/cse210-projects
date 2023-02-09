@@ -59,4 +59,5 @@ class Program
     {
         return string.Concat(word.Select(p => discovered.Contains(p.ToString()) ? p : '_'));
     }
+
 }
