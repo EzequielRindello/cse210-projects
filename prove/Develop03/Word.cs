@@ -9,7 +9,7 @@ public class Word
     {
         _proverbs = proverbs;
     }
-    public List<string> ReplaceRandoWord(List<string> _proverbs)
+    public List<string> ReplaceRandonWord(List<string> _proverbs)
     {
         var random = new Random();
         int index = random.Next(_proverbs.Count);

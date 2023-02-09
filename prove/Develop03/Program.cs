@@ -28,7 +28,7 @@ class Program
             {
                 // Select random words and replace it.
                 Word new_list = new Word(proverbs);
-                proverbs = new_list.ReplaceRandoWord(proverbs);
+                proverbs = new_list.ReplaceRandonWord(proverbs);
             }
             else if (user_input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
             {
