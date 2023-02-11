@@ -5,6 +5,7 @@ class Program
     {
         // Original scripture.
         List<string> proverbs = CreateVerse();
+        List<string> final = FinalVerse();
         //  Parametrer for the main loop.
         bool valid = false;
         // Main loop for the program.
@@ -24,6 +25,11 @@ class Program
             string user_input = Console.ReadLine();
             if (user_input == "")
             {
+                if(proverbs==final)
+                {
+                    valid=true;
+                    return;
+                }
                 // Select random words and replace it.
                 Word new_list = new Word(proverbs);
                 // I choose 8 because it has to select and ignore white spaces!
@@ -50,6 +56,13 @@ class Program
         List<string> x = new List<string>() {"Trust"," ","in"," ","the"," ","Lord"," ","with"," ","all"," ","thine"," ","heart",";"," ","and"," ", "lean"
         ," ","not"," ","unto"," ","thine"," ", "own"," ","understanding","."," ","In"," ","all"," ","thy"," ","ways",
         " ","acknowledge"," ", "him",","," ", "and"," ", "he"," ", "shall"," ", "direct"," ", "thy"," ", "paths","." };
+        return x;
+    }
+    public static List<string> FinalVerse()
+    {
+        List<string> x = new List<string>() {"_____"," ","__"," ","___"," ","____"," ","____"," ","___"," ","_____"," ","_____",";"," ","___"," ", "____"
+        ," ","___"," ","____"," ","_____"," ", "___"," ","_____________","."," ","__"," ","___"," ","___"," ","____",
+        " ","___________"," ", "___",","," ", "___"," ", "__"," ", "_____"," ", "______"," ", "___"," ", "_____","." };
         return x;
     }
 }
