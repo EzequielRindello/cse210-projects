@@ -7,9 +7,9 @@ class Program
         List<string> proverbs = CreateVerse();
         List<string> final = FinalVerse();
         //  Parametrer for the main loop.
-        bool valid = false;
+        bool isEqual = proverbs.All(final.Contains) && final.All(proverbs.Contains);
         // Main loop for the program.
-        while (!valid)
+        while (!isEqual)
         {
             //Clear the console.
             Console.Clear();
@@ -25,11 +25,6 @@ class Program
             string user_input = Console.ReadLine();
             if (user_input == "")
             {
-                if(proverbs==final)
-                {
-                    valid=true;
-                    return;
-                }
                 // Select random words and replace it.
                 Word new_list = new Word(proverbs);
                 // I choose 8 because it has to select and ignore white spaces!
@@ -42,7 +37,7 @@ class Program
             else if (user_input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
             {
                 // Stops the program.
-                valid = true;
+                isEqual = true;
             }
             else
             {
