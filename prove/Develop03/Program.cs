@@ -5,10 +5,11 @@ class Program
     {
         // Original scripture.
         List<string> proverbs = CreateVerse();
+        List<string> final = FinalVerse();
         //  Parametrer for the main loop.
-        bool valid = false;
+        bool isEqual = proverbs.All(final.Contains) && final.All(proverbs.Contains);
         // Main loop for the program.
-        while (!valid)
+        while (!isEqual)
         {
             //Clear the console.
             Console.Clear();
@@ -36,7 +37,7 @@ class Program
             else if (user_input.Equals("quit", StringComparison.InvariantCultureIgnoreCase))
             {
                 // Stops the program.
-                valid = true;
+                isEqual = true;
             }
             else
             {
@@ -50,6 +51,13 @@ class Program
         List<string> x = new List<string>() {"Trust"," ","in"," ","the"," ","Lord"," ","with"," ","all"," ","thine"," ","heart",";"," ","and"," ", "lean"
         ," ","not"," ","unto"," ","thine"," ", "own"," ","understanding","."," ","In"," ","all"," ","thy"," ","ways",
         " ","acknowledge"," ", "him",","," ", "and"," ", "he"," ", "shall"," ", "direct"," ", "thy"," ", "paths","." };
+        return x;
+    }
+    public static List<string> FinalVerse()
+    {
+        List<string> x = new List<string>() {"_____"," ","__"," ","___"," ","____"," ","____"," ","___"," ","_____"," ","_____",";"," ","___"," ", "____"
+        ," ","___"," ","____"," ","_____"," ", "___"," ","_____________","."," ","__"," ","___"," ","___"," ","____",
+        " ","___________"," ", "___",","," ", "___"," ", "__"," ", "_____"," ", "______"," ", "___"," ", "_____","." };
         return x;
     }
 }
