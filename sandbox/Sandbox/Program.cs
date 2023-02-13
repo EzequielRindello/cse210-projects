@@ -8,12 +8,12 @@ class Program
         Console.Clear();
         Console.WriteLine("What model do you prefer:\nPeugeot\nFiat ");
         string userAnswer=Console.ReadLine();
-        if(userAnswer=="Peugeot")
+        if(userAnswer.Equals("Peugeot",StringComparison.InvariantCultureIgnoreCase))
         {
-
-        }else if(userAnswer=="Fiat")
+            return;
+        }else if(userAnswer.Equals("Fiat",StringComparison.InvariantCultureIgnoreCase))
         {
-            
+            return;
         }else
         {
             Console.WriteLine("Error. Please enter a valid choice");
