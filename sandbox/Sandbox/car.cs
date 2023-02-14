@@ -21,8 +21,5 @@ public class Car
     {
         return _year;
     }
-    public void Display()
-    {
-        Console.WriteLine($"{_model}{_name}{_year}");
-    }
+
 }
