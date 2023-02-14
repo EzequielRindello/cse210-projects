@@ -22,4 +22,8 @@ public class Car
         return _year;
     }
 
-}
+    public string GetCarInfo()
+    {
+        return $"{_model} {_name} {_year}";
+    }
+} 

@@ -10,7 +10,8 @@ class Program
         string userAnswer=Console.ReadLine();
         if(userAnswer.Equals("Peugeot",StringComparison.InvariantCultureIgnoreCase))
         {
- 
+            Car car1=new Car("Peugeot 306", "XR",1998);
+            car1.GetCarInfo();
             return;
         }else if(userAnswer.Equals("Fiat",StringComparison.InvariantCultureIgnoreCase))
         {
