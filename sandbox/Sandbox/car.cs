@@ -1,8 +1,8 @@
 public class Car
 {
-    private string _name="";
-    private string _model="";
-    private int _year=0;
+    protected string _name="";
+    protected string _model="";
+    protected int _year=0;
   
     public string GetName()
     {
