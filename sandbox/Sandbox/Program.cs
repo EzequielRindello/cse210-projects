@@ -12,12 +12,17 @@ class Program
         {
             Car car1=new Car();
             car1.SetName("Peugeot 306");
-            car1.SetModel("XR");
+            car1.SetModel("XR 1.8");
             car1.SetYear(1998);
             Console.WriteLine(car1.GetCarInfo());
             return;
         }else if(userAnswer.Equals("Fiat",StringComparison.InvariantCultureIgnoreCase))
         {
+            Car car1=new Car();
+            car1.SetName("Fiat 147");
+            car1.SetModel("Spazio TR 1.3");
+            car1.SetYear(1987);
+            Console.WriteLine(car1.GetCarInfo());
             return;
         }else
         {
