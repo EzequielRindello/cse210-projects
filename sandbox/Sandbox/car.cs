@@ -1,29 +1,36 @@
 public class Car
 {
-    private string _model="";
     private string _name="";
+    private string _model="";
     private int _year=0;
-    public Car(string a, string b, int c)
+    public string GetName()
     {
-        _model = a;
-        _name = b;
-        _year = c;
+        return _name;
+    }
+    public void SetName(string name)
+    {
+        _name=name;
     }
     public string GetModel()
     {
         return _model;
     }
-    public string GetName()
+    public void SetModel(string model)
     {
-        return _name;
+        _model=model;
     }
+
     public int GetYear()
     {
         return _year;
     }
+    public void SetYear(int year)
+    {
+        _year=year;
+    }
 
     public string GetCarInfo()
     {
-        return $"{_model} {_name} {_year}";
+        return $"{_name} {_model} {_year}";
     }
 } 

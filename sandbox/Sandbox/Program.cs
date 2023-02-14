@@ -5,13 +5,16 @@ class Program
     {
         while(true)
         {
-        //Console.Clear();
+        Console.Clear();
         Console.WriteLine("What model do you prefer:\nPeugeot\nFiat ");
         string userAnswer=Console.ReadLine();
         if(userAnswer.Equals("Peugeot",StringComparison.InvariantCultureIgnoreCase))
         {
-            Car car1=new Car("Peugeot 306", "XR",1998);
-            car1.GetCarInfo();
+            Car car1=new Car();
+            car1.SetName("Peugeot 306");
+            car1.SetModel("XR");
+            car1.SetYear(1998);
+            Console.WriteLine(car1.GetCarInfo());
             return;
         }else if(userAnswer.Equals("Fiat",StringComparison.InvariantCultureIgnoreCase))
         {
