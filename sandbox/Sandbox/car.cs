@@ -1,8 +1,8 @@
 public class Car
 {
-    private string _model;
-    private string _name;
-    private int _year;
+    private string _model="";
+    private string _name="";
+    private int _year=0;
     public Car(string a, string b, int c)
     {
         _model = a;
