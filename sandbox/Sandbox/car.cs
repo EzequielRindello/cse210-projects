@@ -1,11 +1,28 @@
 public class Car
 {
-    private string _moldel;
-    private int _year;
+    private string _model;
     private string _name;
-
-    public void Display(string model,int year,string name)
+    private int _year;
+    public Car(string a, string b, int c)
     {
-        Console.WriteLine($"{model}{name}{year}");
+        _model = a;
+        _name = b;
+        _year = c;
+    }
+    public string GetModel()
+    {
+        return _model;
+    }
+    public string GetName()
+    {
+        return _name;
+    }
+    public int GetYear()
+    {
+        return _year;
+    }
+    public void Display()
+    {
+        Console.WriteLine($"{_model}{_name}{_year}");
     }
 }
