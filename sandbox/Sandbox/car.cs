@@ -3,6 +3,7 @@ public class Car
     private string _name="";
     private string _model="";
     private int _year=0;
+  
     public string GetName()
     {
         return _name;
@@ -28,7 +29,15 @@ public class Car
     {
         _year=year;
     }
-
+    
+/* 
+    public Car(string a,string b,int c)
+    {
+        _name=a;
+        _model=b;
+        _year=c;
+    }
+    */
     public string GetCarInfo()
     {
         return $"{_name} {_model} {_year}";
