@@ -10,7 +10,7 @@ class Program
         string userAnswer=Console.ReadLine();
         if(userAnswer.Equals("Peugeot",StringComparison.InvariantCultureIgnoreCase))
         {
-            Car car1=new Car();
+            PeugeotInfo car1=new PeugeotInfo();
             car1.SetName("Peugeot 306");
             car1.SetModel("XR 1.8");
             car1.SetYear(1998);
@@ -18,7 +18,7 @@ class Program
             return;
         }else if(userAnswer.Equals("Fiat",StringComparison.InvariantCultureIgnoreCase))
         {
-            Car car1=new Car();
+            FiatInfo car1=new FiatInfo();
             car1.SetName("Fiat 147");
             car1.SetModel("Spazio TR 1.3");
             car1.SetYear(1987);
