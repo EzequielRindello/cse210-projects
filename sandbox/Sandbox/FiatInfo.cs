@@ -2,4 +2,9 @@ public class FiatInfo:Car
 {
     private string _hayquedefinirquehacelaclase;
     private string _hayquedefinirquehacelaclase2;
+
+    public FiatInfo(string name,string model,int year,string hayquedefinirquehacelaclase) : base(name,model,year)
+    {
+        _hayquedefinirquehacelaclase=hayquedefinirquehacelaclase;
+    }
 }
