@@ -19,8 +19,9 @@ class Program
                     Console.Clear();
                     return;
                 default :
+                    Console.Clear();
                     Console.WriteLine("Error, please enter a valid choice.");
-                    Thread.Sleep(1000);
+                    Thread.Sleep(4000);
                     break;
             }
         }
