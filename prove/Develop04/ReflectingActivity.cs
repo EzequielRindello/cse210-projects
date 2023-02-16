@@ -8,6 +8,9 @@ public class ReflectingActivity : Activity
     public ReflectingActivity(string name, string description, int duration, List<string> promps, List<string> questions) :
         base(name, description, duration)
     {
+        name="Reflecting";
+        description = "This activity will help you reflect on times ...";
+        duration = 50;
         _prompts = promps;
         _questions = questions;
     }
