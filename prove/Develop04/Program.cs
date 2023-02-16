@@ -5,8 +5,9 @@ class Program
     static void Main(string[] args)
     {
         // Lists of promps and questions.
-        List<string> promps = new List<string>();
-        List<string> questions = new List<string>();
+        List<string> prompsReflecting = new List<string>();
+        List<string> questionsReflecting = new List<string>();
+        List<string> prompsListing = new List<string>();
         // While loop with a menu.
         while (true)
         {
@@ -47,7 +48,13 @@ class Program
     }
     public static List<string> GetQuestionList(List<string> x)
     {
-        
+
+        return x;
+    }
+
+    public static List<string> GetListingList(List<string> x)
+    {
+
         return x;
     }
 }
