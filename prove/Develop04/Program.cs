@@ -9,6 +9,7 @@ class Program
         List<string> questionsReflecting = new List<string>();
         List<string> prompsListing = new List<string>();
         // While loop with a menu.
+
         while (true)
         {
             Console.Clear();
@@ -35,17 +36,20 @@ class Program
             }
         }
     }
+
     public static string GetMenuChoice()
     {
         Console.WriteLine("Menu Options:");
         Console.WriteLine("1:Start breathing activity\n2:Start reflection activity\n3:Start listening activity\n4:Quit");
         return Console.ReadLine();
     }
+
     public static List<string> GetPrompList(List<string> x)
     {
 
         return x;
     }
+
     public static List<string> GetQuestionList(List<string> x)
     {
 
@@ -57,4 +61,5 @@ class Program
 
         return x;
     }
+
 }

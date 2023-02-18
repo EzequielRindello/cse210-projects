@@ -14,10 +14,12 @@ public class ReflectingActivity : Activity
         _prompts = promps;
         _questions = questions;
     }
+
     public void GetRandomPrompt()
     {
 
     }
+
     public void GetRandomQuestion()
     {
 
