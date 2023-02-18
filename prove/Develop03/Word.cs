@@ -9,6 +9,7 @@ public class Word
     {
         _proverbs = proverbs;
     }
+
     public List<string> ReplaceRandonWord(List<string> _proverbs)
     {
         var random = new Random();
@@ -27,8 +28,8 @@ public class Word
         
         }
         return _proverbs;
-
     }
+    
     private string ConvertWord(string word, HashSet<string> discovered)
     {
         return string.Concat(word.Select(p => discovered.Contains(p.ToString()) ? p : '_'));
