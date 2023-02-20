@@ -17,7 +17,7 @@ public class Activity
         Console.WriteLine();
         Console.WriteLine(_description);
         Console.WriteLine();
-        Console.WriteLine("Prees any key to continue.");
+        Console.WriteLine("Enter any key to continue.");
         string none = Console.ReadLine();
     }
 
