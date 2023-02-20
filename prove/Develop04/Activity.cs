@@ -18,7 +18,7 @@ public class Activity
         Console.WriteLine(_description);
         Console.WriteLine();
         Console.WriteLine("Prees any key to continue.");
-        string none=Console.ReadLine();
+        string none = Console.ReadLine();
     }
 
     public void GetReadyMessage()
@@ -29,31 +29,31 @@ public class Activity
 
     public void PauseSpinner()
     {
-        int counter=0;
+        int counter = 0;
         while (true)
         {
             counter++;
             switch (counter % 4)
             {
-                case 0: 
+                case 0:
                     Console.Write("/");
                     Thread.Sleep(650);
                     break;
-                case 1: 
-                    Console.Write("-"); 
+                case 1:
+                    Console.Write("-");
                     Thread.Sleep(650);
                     break;
-                case 2: 
-                    Console.Write("\\"); 
+                case 2:
+                    Console.Write("\\");
                     Thread.Sleep(650);
                     break;
-                case 3: 
-                    Console.Write("|"); 
+                case 3:
+                    Console.Write("|");
                     Thread.Sleep(650);
                     break;
             }
             Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-            if (counter==10)
+            if (counter == 10)
             {
                 break;
             }

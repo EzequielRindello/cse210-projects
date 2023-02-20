@@ -11,7 +11,14 @@ public class BreathingActivity : Activity
 
     public void RunBreathingActivity()
     {
-
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(30000);
+        DateTime currentTime = DateTime.Now;
+        while(currentTime < futureTime)
+        {
+            Console.WriteLine("Works?");
+            Thread.Sleep(15000);
+        }
     }
 
     public void BreatheIn()

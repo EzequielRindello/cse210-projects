@@ -18,18 +18,19 @@ class Program
             {
                 case "1":
                     Console.Clear();
-                    BreathingActivity primera= new BreathingActivity("","",0);
+                    BreathingActivity primera = new BreathingActivity("", "", 0);
                     primera.DisplayStartingMessage();
                     Console.Clear();
                     primera.GetReadyMessage();
                     //
+                    primera.RunBreathingActivity();
                     //
                     //
                     primera.DisplayEndingMessage();
                     break;
                 case "2":
                     Console.Clear();
-                    ReflectingActivity segunda= new ReflectingActivity("","",0,prompsReflecting,questionsReflecting);
+                    ReflectingActivity segunda = new ReflectingActivity("", "", 0, prompsReflecting, questionsReflecting);
                     segunda.DisplayStartingMessage();
                     Console.Clear();
                     segunda.GetReadyMessage();
@@ -39,7 +40,7 @@ class Program
                     segunda.DisplayEndingMessage();
                     break;
                 case "3":
-                    ListingActivity tercera= new ListingActivity("","",0,prompsListing);
+                    ListingActivity tercera = new ListingActivity("", "", 0, prompsListing);
                     tercera.DisplayStartingMessage();
                     Console.Clear();
                     tercera.GetReadyMessage();
@@ -69,7 +70,7 @@ class Program
 
     public static List<string> GetPrompList()
     {
-        List<string> x= new List<string>();
+        List<string> x = new List<string>();
         x.Add("Think of a time when you stood up for someone else.");
         x.Add("Think of a time when you did something really difficult.");
         x.Add("Think of a time when you helped someone in need.");
@@ -79,13 +80,13 @@ class Program
 
     public static List<string> GetQuestionList()
     {
-        List<string> x= new List<string>();
+        List<string> x = new List<string>();
         return x;
     }
 
     public static List<string> GetListingList()
     {
-        List<string> x= new List<string>();
+        List<string> x = new List<string>();
         x.Add("Who are people that you appreciate?");
         x.Add("What are personal strengths of yours?");
         x.Add("Who are people that you have helped this week?");
