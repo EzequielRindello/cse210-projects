@@ -1,5 +1,6 @@
 public class BreathingActivity : Activity
 {
+    // No atributes were defined for this class.
     public BreathingActivity(string name, string description, int duration) :
         base(name, description, duration)
     {
@@ -8,4 +9,18 @@ public class BreathingActivity : Activity
         _duration = 50;
     }
 
+    public void RunBreathingActivity()
+    {
+
+    }
+
+    public void BreatheIn()
+    {
+        Console.WriteLine();
+    }
+
+    public void BreatheOut()
+    {
+        Console.WriteLine();
+    }
 }
