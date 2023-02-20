@@ -5,9 +5,9 @@ class Program
     static void Main(string[] args)
     {
         // Lists of promps and questions.
-        List<string> prompsReflecting = new List<string>();
-        List<string> questionsReflecting = new List<string>();
-        List<string> prompsListing = new List<string>();
+        List<string> prompsReflecting = GetPrompList();
+        List<string> questionsReflecting = GetQuestionList();
+        List<string> prompsListing = GetListingList();
         // While loop with a menu.
 
         while (true)
@@ -67,21 +67,30 @@ class Program
         return Console.ReadLine();
     }
 
-    public static List<string> GetPrompList(List<string> x)
+    public static List<string> GetPrompList()
     {
-
+        List<string> x= new List<string>();
+        x.Add("Think of a time when you stood up for someone else.");
+        x.Add("Think of a time when you did something really difficult.");
+        x.Add("Think of a time when you helped someone in need.");
+        x.Add("Think of a time when you did something truly selfless.");
         return x;
     }
 
-    public static List<string> GetQuestionList(List<string> x)
+    public static List<string> GetQuestionList()
     {
-
+        List<string> x= new List<string>();
         return x;
     }
 
-    public static List<string> GetListingList(List<string> x)
+    public static List<string> GetListingList()
     {
-
+        List<string> x= new List<string>();
+        x.Add("Who are people that you appreciate?");
+        x.Add("What are personal strengths of yours?");
+        x.Add("Who are people that you have helped this week?");
+        x.Add("When have you felt the Holy Ghost this month?");
+        x.Add("Who are some of your personal heroes?");
         return x;
     }
 
