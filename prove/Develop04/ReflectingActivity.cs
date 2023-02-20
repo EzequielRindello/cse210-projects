@@ -17,12 +17,18 @@ public class ReflectingActivity : Activity
 
     public void GetRandomPrompt()
     {
-
+        Random random = new Random();
+        int index = random.Next(_prompts.Count);
+        string ramdomPromp = _prompts[index];
+        _ramdomPromp=ramdomPromp;
     }
 
     public void GetRandomQuestion()
     {
-
+        Random random = new Random();
+        int index = random.Next(_questions.Count);
+        string ramdomquestion = _questions[index];
+        _randomQuestion=ramdomquestion;
     }
 
 }
