@@ -24,6 +24,7 @@ public class Activity
     public void GetReadyMessage()
     {
         Console.WriteLine("Get Ready...");
+        PauseSpinner();
     }
 
     public void PauseSpinner()
@@ -61,6 +62,7 @@ public class Activity
 
     public void DisplayEndingMessage()
     {
-
+        Console.WriteLine("Weel done!!!");
+        PauseSpinner();
     }
 }

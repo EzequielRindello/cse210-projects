@@ -22,7 +22,10 @@ class Program
                     primera.DisplayStartingMessage();
                     Console.Clear();
                     primera.GetReadyMessage();
-                    primera.PauseSpinner();
+                    //
+                    //
+                    //
+                    primera.DisplayEndingMessage();
                     break;
                 case "2":
                     Console.Clear();
@@ -30,15 +33,20 @@ class Program
                     segunda.DisplayStartingMessage();
                     Console.Clear();
                     segunda.GetReadyMessage();
-                    segunda.PauseSpinner();
+                    //
+                    //
+                    //
+                    segunda.DisplayEndingMessage();
                     break;
                 case "3":
                     ListingActivity tercera= new ListingActivity("","",0,prompsListing);
                     tercera.DisplayStartingMessage();
                     Console.Clear();
                     tercera.GetReadyMessage();
-                    tercera.PauseSpinner();
-                    Console.Clear();
+                    //
+                    //
+                    //
+                    tercera.DisplayEndingMessage();
                     break;
                 case "4":
                     Console.WriteLine("Thanks for using the program!");
