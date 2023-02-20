@@ -25,7 +25,6 @@ class Program
                     //
                     primera.RunBreathingActivity();
                     //
-                    //
                     primera.DisplayEndingMessage();
                     break;
                 case "2":
@@ -35,7 +34,7 @@ class Program
                     Console.Clear();
                     segunda.GetReadyMessage();
                     //
-                    //
+                    
                     //
                     segunda.DisplayEndingMessage();
                     break;
@@ -45,7 +44,7 @@ class Program
                     Console.Clear();
                     tercera.GetReadyMessage();
                     //
-                    //
+                    
                     //
                     tercera.DisplayEndingMessage();
                     break;
