@@ -1,8 +1,8 @@
 public class Activity
 {
-    private string _name;
-    private string _description;
-    private int _duration;
+    protected string _name;
+    protected string _description;
+    protected int _duration;
 
     public Activity(string name, string description, int duration)
     {
@@ -13,12 +13,17 @@ public class Activity
 
     public void DisplayStartingMessage()
     {
-
+        Console.WriteLine(_name);
+        Console.WriteLine();
+        Console.WriteLine(_description);
+        Console.WriteLine();
+        Console.WriteLine("Prees any key to continue.");
+        Console.Read();
     }
 
     public void GetReadyMessage()
     {
-
+        Console.WriteLine("Get Ready...");
     }
 
     public void PauseSpinner()

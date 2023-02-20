@@ -18,13 +18,28 @@ class Program
             {
                 case "1":
                     Console.Clear();
-                    return;
+                    BreathingActivity primera= new BreathingActivity("","",0);
+                    primera.DisplayStartingMessage();
+                    Console.Clear();
+                    primera.GetReadyMessage();
+                    primera.PauseSpinner();
+                    break;
                 case "2":
                     Console.Clear();
-                    return;
-                case "3":
+                    ReflectingActivity segunda= new ReflectingActivity("","",0,prompsReflecting,questionsReflecting);
+                    segunda.DisplayStartingMessage();
                     Console.Clear();
-                    return;
+                    segunda.GetReadyMessage();
+                    segunda.PauseSpinner();
+                    break;
+                case "3":
+                    ListingActivity tercera= new ListingActivity("","",0,prompsListing);
+                    tercera.DisplayStartingMessage();
+                    Console.Clear();
+                    tercera.GetReadyMessage();
+                    tercera.PauseSpinner();
+                    Console.Clear();
+                    break;
                 case "4":
                     Console.WriteLine("Thanks for using the program!");
                     return;
