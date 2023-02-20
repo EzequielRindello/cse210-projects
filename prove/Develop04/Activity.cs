@@ -26,7 +26,6 @@ public class Activity
         int counter=0;
         while (true)
         {
-            
             counter++;
             switch (counter % 4)
             {
