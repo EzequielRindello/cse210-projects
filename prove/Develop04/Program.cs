@@ -78,6 +78,16 @@ class Program
     public static List<string> GetQuestionList()
     {
         List<string> x = new List<string>();
+        x.Add("Why was this experience meaningful to you?");
+        x.Add("Have you ever done anything like this before?");
+        x.Add("How did you get started?");
+        x.Add("How did you feel when it was complete?");
+        x.Add("What made this time different than other times when you were not as successful?");
+        x.Add("What is your favorite thing about this experience?");
+        x.Add("What could you learn from this experience that applies to other situations?");
+        x.Add("What did you learn about yourself through this experience?");
+        x.Add("How can you keep this experience in mind in the future?");
+
         return x;
     }
 

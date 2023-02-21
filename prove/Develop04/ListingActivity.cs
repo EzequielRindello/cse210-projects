@@ -7,7 +7,7 @@ public class ListingActivity : Activity
     {
         _name = "Welcome to the listing activity.";
         _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
-        _duration = 30;
+        _duration = 40;
         _prompsListing = promp;
     }
 
