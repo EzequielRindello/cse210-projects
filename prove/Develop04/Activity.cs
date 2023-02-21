@@ -63,6 +63,7 @@ public class Activity
     public void DisplayEndingMessage()
     {
         Console.WriteLine("Weel done!!!");
+        Console.WriteLine($"You have completed {_duration} seconds of the {_name} ");
         PauseSpinner();
     }
 }
