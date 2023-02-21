@@ -22,9 +22,7 @@ class Program
                     primera.DisplayStartingMessage();
                     Console.Clear();
                     primera.GetReadyMessage();
-                    //
                     primera.RunBreathingActivity();
-                    //
                     primera.DisplayEndingMessage();
                     break;
                 case "2":

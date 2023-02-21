@@ -11,23 +11,30 @@ public class BreathingActivity : Activity
 
     public void RunBreathingActivity()
     {
-        DateTime startTime = DateTime.Now;
-        DateTime futureTime = startTime.AddSeconds(30000);
-        DateTime currentTime = DateTime.Now;
-        while(currentTime < futureTime)
-        {
-            Console.WriteLine("Works?");
-            Thread.Sleep(15000);
-        }
+        BreatheIn();
+        BreatheOut();
+        BreatheIn();
+        BreatheOut();
     }
 
     public void BreatheIn()
     {
-        Console.WriteLine();
+        for (int i = 0; i < 5; ++i)
+        {
+            Console.Write($"\rBreathe in...{i} ");
+            Thread.Sleep(1100);
+        }
+        Console.WriteLine("");
     }
 
     public void BreatheOut()
     {
-        Console.WriteLine();
+        for (int i = 0; i < 7; ++i)
+        {
+            Console.Write($"\rBreathe out...{i} ");
+            Thread.Sleep(1100);
+        }
+        Console.WriteLine("");
+        Console.WriteLine("");
     }
 }
