@@ -11,10 +11,15 @@ public class BreathingActivity : Activity
 
     public void RunBreathingActivity()
     {
-        BreatheIn();
-        BreatheOut();
-        BreatheIn();
-        BreatheOut();
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(_duration);
+        DateTime currentTime = DateTime.Now;
+        while(currentTime<futureTime)
+        {
+           currentTime = DateTime.Now;
+           BreatheIn();
+           BreatheOut();
+        }
     }
 
     public void BreatheIn()
@@ -22,7 +27,7 @@ public class BreathingActivity : Activity
         for (int i = 0; i < 5; ++i)
         {
             Console.Write($"\rBreathe in...{i} ");
-            Thread.Sleep(1100);
+            Thread.Sleep(1000);
         }
         Console.WriteLine("");
     }
@@ -32,7 +37,7 @@ public class BreathingActivity : Activity
         for (int i = 0; i < 7; ++i)
         {
             Console.Write($"\rBreathe out...{i} ");
-            Thread.Sleep(1100);
+            Thread.Sleep(1000);
         }
         Console.WriteLine("");
         Console.WriteLine("");
