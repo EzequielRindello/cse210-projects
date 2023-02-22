@@ -17,7 +17,17 @@ public class ReflectingActivity : Activity
 
     public void RunReflectingActivity()
     {
-        
+        GetRandomPrompt();
+        DisplayPromp();
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(_duration);
+        DateTime currentTime = DateTime.Now;
+        Timer();
+        while (currentTime < futureTime)
+        {
+            currentTime = DateTime.Now;
+
+        }
     }
 
     public void GetRandomPrompt()
@@ -25,7 +35,7 @@ public class ReflectingActivity : Activity
         Random random = new Random();
         int index = random.Next(_prompts.Count);
         string ramdomPromp = _prompts[index];
-        _ramdomPromp=ramdomPromp;
+        _ramdomPromp = ramdomPromp;
     }
 
     public void GetRandomQuestion()
@@ -33,7 +43,20 @@ public class ReflectingActivity : Activity
         Random random = new Random();
         int index = random.Next(_questions.Count);
         string ramdomquestion = _questions[index];
-        _randomQuestion=ramdomquestion;
+        _randomQuestion = ramdomquestion;
+    }
+
+    public void DisplayPromp()
+    {
+        Console.WriteLine("Consider the following promp: ");
+        Console.WriteLine($"---{_ramdomPromp}---");
+        Console.WriteLine("When you have somethig in your mind enter any key to continue.");
+        string none = Console.ReadLine();
+    }
+
+    public void DisplayQuestion()
+    {
+
     }
 
 }

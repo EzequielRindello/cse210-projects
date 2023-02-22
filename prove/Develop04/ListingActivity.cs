@@ -2,6 +2,7 @@ public class ListingActivity : Activity
 {
     private List<string> _prompsListing;
     private string _ramdomListPromp;
+    private List<string> _listing;
 
     public ListingActivity(string name, string description, int duration, List<string> promp) :
         base(name, description, duration)
@@ -14,7 +15,15 @@ public class ListingActivity : Activity
 
     public void RunListingActivity()
     {
-        
+        DateTime startTime = DateTime.Now;
+        DateTime futureTime = startTime.AddSeconds(_duration);
+        DateTime currentTime = DateTime.Now;
+
+        while (currentTime < futureTime)
+        {
+            currentTime = DateTime.Now;
+            
+        }
     }
 
     public void GetRandomListPrompt()
@@ -24,5 +33,6 @@ public class ListingActivity : Activity
         string ramdomListPromp = _prompsListing[index];
         _ramdomListPromp=ramdomListPromp;
     }
+
 
 }

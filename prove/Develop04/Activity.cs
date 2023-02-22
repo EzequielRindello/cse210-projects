@@ -60,6 +60,15 @@ public class Activity
         }
     }
 
+    public void Timer()
+    {
+        for (int i = 0; i < 5; ++i)
+        {
+            Console.Write($"\rYou may begin in...{i} ");
+            Thread.Sleep(1000);
+        }
+    }
+
     public void DisplayEndingMessage()
     {
         Console.WriteLine("Weel done!!!");

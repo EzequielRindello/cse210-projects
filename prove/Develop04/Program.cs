@@ -8,8 +8,8 @@ class Program
         List<string> prompsReflecting = GetPrompList();
         List<string> questionsReflecting = GetQuestionList();
         List<string> prompsListing = GetListingList();
+        
         // While loop with a menu.
-
         while (true)
         {
             Console.Clear();
