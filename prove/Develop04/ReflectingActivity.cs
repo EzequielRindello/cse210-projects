@@ -48,6 +48,7 @@ public class ReflectingActivity : Activity
 
     public void DisplayPromp()
     {
+        Console.WriteLine();
         Console.WriteLine("Consider the following promp: ");
         Console.WriteLine($"--- {_ramdomPromp} ---");
         Console.WriteLine("When you have somethig in your mind enter any key to continue.");
