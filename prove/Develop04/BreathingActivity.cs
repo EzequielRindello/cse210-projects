@@ -1,8 +1,7 @@
 public class BreathingActivity : Activity
 {
     // No atributes were defined for this class.
-    public BreathingActivity(string name, string description, int duration) :
-        base(name, description, duration)
+    public BreathingActivity(string name, string description, int duration) : base(name, description, duration)
     {
         _name = "Breathing activity.";
         _description = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
@@ -14,11 +13,12 @@ public class BreathingActivity : Activity
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(_duration);
         DateTime currentTime = DateTime.Now;
-        while(currentTime<futureTime)
+
+        while (currentTime < futureTime)
         {
-           currentTime = DateTime.Now;
-           BreatheIn();
-           BreatheOut();
+            currentTime = DateTime.Now;
+            BreatheIn();
+            BreatheOut();
         }
     }
 
@@ -29,6 +29,7 @@ public class BreathingActivity : Activity
             Console.Write($"\rBreathe in...{i} ");
             Thread.Sleep(1000);
         }
+
         Console.WriteLine("");
     }
 
@@ -39,7 +40,9 @@ public class BreathingActivity : Activity
             Console.Write($"\rBreathe out...{i} ");
             Thread.Sleep(1000);
         }
+
         Console.WriteLine("");
         Console.WriteLine("");
     }
+    
 }
