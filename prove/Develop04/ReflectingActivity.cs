@@ -19,10 +19,10 @@ public class ReflectingActivity : Activity
     {
         GetRandomPrompt();
         DisplayPromp();
+        Timer();
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(_duration);
         DateTime currentTime = DateTime.Now;
-        Timer();
         while (currentTime < futureTime)
         {
             currentTime = DateTime.Now;
@@ -49,7 +49,7 @@ public class ReflectingActivity : Activity
     public void DisplayPromp()
     {
         Console.WriteLine("Consider the following promp: ");
-        Console.WriteLine($"---{_ramdomPromp}---");
+        Console.WriteLine($"--- {_ramdomPromp} ---");
         Console.WriteLine("When you have somethig in your mind enter any key to continue.");
         string none = Console.ReadLine();
     }

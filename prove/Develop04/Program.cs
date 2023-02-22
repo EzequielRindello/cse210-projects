@@ -66,10 +66,10 @@ class Program
     public static List<string> GetPrompList()
     {
         List<string> x = new List<string>();
-        x.Add("Think of a time when you stood up for someone else.");
-        x.Add("Think of a time when you did something really difficult.");
-        x.Add("Think of a time when you helped someone in need.");
-        x.Add("Think of a time when you did something truly selfless.");
+        x.Add("Think of a time when you stood up for someone else");
+        x.Add("Think of a time when you did something really difficult");
+        x.Add("Think of a time when you helped someone in need");
+        x.Add("Think of a time when you did something truly selfless");
         return x;
     }
 
