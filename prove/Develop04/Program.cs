@@ -31,9 +31,7 @@ class Program
                     segunda.DisplayStartingMessage();
                     Console.Clear();
                     segunda.GetReadyMessage();
-                    //
-                    
-                    //
+                    segunda.RunReflectingActivity();
                     segunda.DisplayEndingMessage();
                     break;
                 case "3":
