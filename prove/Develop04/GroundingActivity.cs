@@ -19,7 +19,7 @@ public class GroundingActivity : Activity
         string none = Console.ReadLine();
         Timer();
         Console.Clear();
-        
+
         while (true)
         {
             Console.WriteLine("Acknowledge FIVE things you see around you. It could be a pen, a spot on the ceiling, anything in your surroundings.");
@@ -41,6 +41,7 @@ public class GroundingActivity : Activity
         Console.WriteLine("Press enter to continue.");
         none = Console.ReadLine();
     }
+    
     public void SpecialEndingMessage()
     {
         Console.WriteLine("Well done !!!");
