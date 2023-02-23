@@ -34,5 +34,18 @@ public class ListingActivity : Activity
         _ramdomListPromp=ramdomListPromp;
     }
 
+    public void DisplayPromp()
+    {
+        
+    }
 
+    public void SaveUserResponse(string response)
+    {
+        _listing.Add(response);
+    }
+
+    public void DisplayItemsEntered()
+    {
+
+    }
 }
