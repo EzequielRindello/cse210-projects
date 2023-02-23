@@ -52,7 +52,9 @@ public class Activity
                     Thread.Sleep(650);
                     break;
             }
+
             Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+
             if (counter == 25)
             {
                 break;
@@ -67,6 +69,7 @@ public class Activity
             Console.Write($"\rYou may begin in...{i} ");
             Thread.Sleep(1000);
         }
+
         Console.Write($"\rYou may begin in... ");
         Console.WriteLine("");
         Console.WriteLine("");
@@ -78,4 +81,5 @@ public class Activity
         Console.WriteLine($"You have completed {_duration} seconds of the {_name} ");
         PauseSpinner();
     }
+    
 }
