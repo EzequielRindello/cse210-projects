@@ -35,6 +35,7 @@ class Program
                     segunda.DisplayEndingMessage();
                     break;
                 case "3":
+                    Console.Clear();
                     ListingActivity tercera = new ListingActivity("", "", 0, prompsListing);
                     tercera.DisplayStartingMessage();
                     Console.Clear();
@@ -43,7 +44,11 @@ class Program
                     tercera.DisplayEndingMessage();
                     break;
                 case "4":
-                    Console.WriteLine();
+                    Console.Clear();
+                    GroundingActivity cuarta = new GroundingActivity("", "", 0);
+                    cuarta.GetReadyMessage();
+                    cuarta.RunGroundingActivity();
+                    cuarta.SpecialEndingMessage();
                     break;
                 case "5":
                     Console.WriteLine("Thanks for using the program!");
