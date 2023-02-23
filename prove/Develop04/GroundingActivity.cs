@@ -5,6 +5,7 @@ public class GroundingActivity : Activity
         to add it to get extra points.
         it wont have time and atributes to
         be different from the others :) */
+
     public GroundingActivity(string name, string description, int duration) : base(name, description, duration)
     {
         _name = "Grounding ctivity";
@@ -18,6 +19,7 @@ public class GroundingActivity : Activity
         string none = Console.ReadLine();
         Timer();
         Console.Clear();
+        
         while (true)
         {
             Console.WriteLine("Acknowledge FIVE things you see around you. It could be a pen, a spot on the ceiling, anything in your surroundings.");
