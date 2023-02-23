@@ -28,6 +28,7 @@ public class BreathingActivity : Activity
             Console.Write($"\rBreathe in...{i} ");
             Thread.Sleep(1000);
         }
+
         Console.Write($"\rBreathe in... ");
         Console.WriteLine("");
     }
@@ -39,6 +40,7 @@ public class BreathingActivity : Activity
             Console.Write($"\rBreathe out...{i} ");
             Thread.Sleep(1000);
         }
+        
         Console.Write($"\rBreathe out... ");
         Console.WriteLine("");
         Console.WriteLine("");
