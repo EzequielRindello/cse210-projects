@@ -17,7 +17,7 @@ public class Activity
         Console.WriteLine();
         Console.WriteLine(_description);
         Console.WriteLine();
-        Console.WriteLine("Enter any key to continue. All activities last 40 seconds by default :)");
+        Console.WriteLine("Enter any key to continue. All activities last 30 seconds by default :)");
         string none = Console.ReadLine();
     }
 
@@ -67,6 +67,8 @@ public class Activity
             Console.Write($"\rYou may begin in...{i} ");
             Thread.Sleep(1000);
         }
+        Console.Write($"\rYou may begin in... ");
+        Console.WriteLine("");
         Console.WriteLine("");
     }
 

@@ -1,11 +1,10 @@
 public class BreathingActivity : Activity
 {
-    // No atributes were defined for this class.
     public BreathingActivity(string name, string description, int duration) : base(name, description, duration)
     {
         _name = "Breathing activity.";
         _description = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
-        _duration = 40;
+        _duration = 30;
     }
 
     public void RunBreathingActivity()
@@ -29,7 +28,7 @@ public class BreathingActivity : Activity
             Console.Write($"\rBreathe in...{i} ");
             Thread.Sleep(1000);
         }
-
+        Console.Write($"\rBreathe in... ");
         Console.WriteLine("");
     }
 
@@ -40,7 +39,7 @@ public class BreathingActivity : Activity
             Console.Write($"\rBreathe out...{i} ");
             Thread.Sleep(1000);
         }
-
+        Console.Write($"\rBreathe out... ");
         Console.WriteLine("");
         Console.WriteLine("");
     }
