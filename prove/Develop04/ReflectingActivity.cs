@@ -17,16 +17,21 @@ public class ReflectingActivity : Activity
 
     public void RunReflectingActivity()
     {
+        Console.Clear();
         GetRandomPrompt();
         DisplayPromp();
+        Console.WriteLine("Now ponder on each of the following as they related to this experience...");
         Timer();
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(_duration);
         DateTime currentTime = DateTime.Now;
+
         while (currentTime < futureTime)
         {
             currentTime = DateTime.Now;
-
+            GetRandomQuestion();
+            DisplayQuestion();
+            PauseSpinner();
         }
     }
 
@@ -57,7 +62,8 @@ public class ReflectingActivity : Activity
 
     public void DisplayQuestion()
     {
-
+        Console.Write($"> {_randomQuestion} ");
+        Console.WriteLine();
     }
 
 }

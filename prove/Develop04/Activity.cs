@@ -53,7 +53,7 @@ public class Activity
                     break;
             }
             Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-            if (counter == 10)
+            if (counter == 25)
             {
                 break;
             }
@@ -67,6 +67,7 @@ public class Activity
             Console.Write($"\rYou may begin in...{i} ");
             Thread.Sleep(1000);
         }
+        Console.WriteLine("");
     }
 
     public void DisplayEndingMessage()
