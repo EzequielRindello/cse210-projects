@@ -38,7 +38,6 @@ class Program
                     Console.Clear();
                     ListingActivity tercera = new ListingActivity("", "", 0, prompsListing);
                     tercera.DisplayStartingMessage();
-                    Console.Clear();
                     tercera.GetReadyMessage();
                     tercera.RunListingActivity();
                     tercera.DisplayEndingMessage();
@@ -46,6 +45,7 @@ class Program
                 case "4":
                     Console.Clear();
                     GroundingActivity cuarta = new GroundingActivity("", "", 0);
+                    cuarta.DisplayStartingMessage();
                     cuarta.GetReadyMessage();
                     cuarta.RunGroundingActivity();
                     cuarta.SpecialEndingMessage();
