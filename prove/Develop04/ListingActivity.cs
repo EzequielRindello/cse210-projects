@@ -30,10 +30,11 @@ public class ListingActivity : Activity
             Console.Write("> ");
             string response = Console.ReadLine();
             SaveUserResponse(response, _listing);
-            _counting = +1;
+            _counting++;
         }
 
         DisplayItemsEntered();
+        Console.WriteLine("");
     }
 
     public void GetRandomListPrompt()
