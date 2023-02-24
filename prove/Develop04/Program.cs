@@ -67,7 +67,7 @@ class Program
     public static string GetMenuChoice()
     {
         Console.WriteLine("Menu Options:");
-        Console.WriteLine("1: Start breathing activity\n2: Start reflection activity\n3: Start listening activity\n4: Start grounding activity \n5: Quit");
+        Console.WriteLine("1: Start breathing activity\n2: Start reflection activity\n3: Start listing activity\n4: Start grounding activity \n5: Quit");
         return Console.ReadLine();
     }
 
