@@ -34,7 +34,6 @@ public class ListingActivity : Activity
         }
 
         DisplayItemsEntered();
-        Console.WriteLine("");
     }
 
     public void GetRandomListPrompt()
@@ -58,7 +57,9 @@ public class ListingActivity : Activity
 
     public void DisplayItemsEntered()
     {
+        Console.WriteLine("");
         Console.WriteLine($"You listed {_counting} items in this sesion!");
+        Console.WriteLine("");
     }
 
 }
