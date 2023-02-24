@@ -8,6 +8,7 @@ class Program
         List<string> prompsReflecting = GetPrompList();
         List<string> questionsReflecting = GetQuestionList();
         List<string> prompsListing = GetListingList();
+        List<string> listing = new List<string>();
 
         // While loop with a menu.
         while (true)
@@ -36,8 +37,9 @@ class Program
                     break;
                 case "3":
                     Console.Clear();
-                    ListingActivity tercera = new ListingActivity("", "", 0, prompsListing);
+                    ListingActivity tercera = new ListingActivity("", "", 0, prompsListing, listing);
                     tercera.DisplayStartingMessage();
+                    Console.Clear();
                     tercera.GetReadyMessage();
                     tercera.RunListingActivity();
                     tercera.DisplayEndingMessage();
@@ -45,7 +47,7 @@ class Program
                 case "4":
                     Console.Clear();
                     GroundingActivity cuarta = new GroundingActivity("", "", 0);
-                    cuarta.DisplayStartingMessage();
+                    cuarta.SpecialStartingMessage();
                     cuarta.GetReadyMessage();
                     cuarta.RunGroundingActivity();
                     cuarta.SpecialEndingMessage();

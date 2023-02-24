@@ -41,11 +41,20 @@ public class GroundingActivity : Activity
         Console.WriteLine("Press enter to continue.");
         none = Console.ReadLine();
     }
-    
+
+    public void SpecialStartingMessage()
+    {
+        Console.WriteLine(_name);
+        Console.WriteLine();
+        Console.WriteLine(_description);
+        Console.WriteLine();
+        Console.WriteLine("This program is different from the others since it does not have a predefined time, just relax and take the time you need for each answer. Enter any key when you are ready.");
+        string none = Console.ReadLine();
+    }
+
     public void SpecialEndingMessage()
     {
         Console.WriteLine("Well done !!!");
-        Console.WriteLine("This activity is different from the rest, each time it is done it is recommended to change the answers ;)");
         PauseSpinner();
     }
 

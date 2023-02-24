@@ -3,14 +3,16 @@ public class ListingActivity : Activity
     private List<string> _prompsListing;
     private string _ramdomListPromp;
     private List<string> _listing;
+    private int _counting = 0;
 
-    public ListingActivity(string name, string description, int duration, List<string> promp) :
+    public ListingActivity(string name, string description, int duration, List<string> promp, List<string> listing) :
         base(name, description, duration)
     {
         _name = "Listing activity.";
         _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
         _duration = 30;
         _prompsListing = promp;
+        _listing = listing;
     }
 
     public void RunListingActivity()
@@ -18,12 +20,20 @@ public class ListingActivity : Activity
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(_duration);
         DateTime currentTime = DateTime.Now;
+        GetRandomListPrompt();
+        DisplayPromp();
+        Timer();
 
         while (currentTime < futureTime)
         {
             currentTime = DateTime.Now;
-            
+            Console.Write("> ");
+            string response = Console.ReadLine();
+            SaveUserResponse(response, _listing);
+            _counting = +1;
         }
+
+        DisplayItemsEntered();
     }
 
     public void GetRandomListPrompt()
@@ -31,21 +41,23 @@ public class ListingActivity : Activity
         Random random = new Random();
         int index = random.Next(_prompsListing.Count);
         string ramdomListPromp = _prompsListing[index];
-        _ramdomListPromp=ramdomListPromp;
+        _ramdomListPromp = ramdomListPromp;
     }
 
     public void DisplayPromp()
     {
-        
+        Console.WriteLine("List as many responses you can to the following rompt: ");
+        Console.WriteLine($"--- {_ramdomListPromp} ---");
     }
 
-    public void SaveUserResponse(string response)
+    public void SaveUserResponse(string a, List<string> b)
     {
-        _listing.Add(response);
+        b.Add(a);
     }
 
     public void DisplayItemsEntered()
     {
-
+        Console.WriteLine($"You listed {_counting} items in this sesion!");
     }
+
 }
