@@ -5,7 +5,9 @@ public class PeugeotInfo :Car
 
     public PeugeotInfo(string name,string model,int year,string hayquedefinirquehacelaclase) : base(name,model,year)
     {
-        _hayquedefinirquehacelaclase=hayquedefinirquehacelaclase;
+        _model="XR 1.8";
+        _year=1998;
+        _name="Peugeot 306";
     }
 
     //el comportamiento de esta clase podria ser display the text especifico de aca

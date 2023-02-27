@@ -5,7 +5,9 @@ public class FiatInfo:Car
 
     public FiatInfo(string name,string model,int year,string hayquedefinirquehacelaclase) : base(name,model,year)
     {
-        _hayquedefinirquehacelaclase=hayquedefinirquehacelaclase;
+        _model="Spazio TR 1.3";
+        _year=1988;
+        _name="Fiat 147";
     }
 
 
