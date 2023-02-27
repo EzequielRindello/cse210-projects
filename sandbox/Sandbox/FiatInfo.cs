@@ -1,13 +1,13 @@
-public class FiatInfo:Car
+public class FiatInfo : Car
 {
     private string _hayquedefinirquehacelaclase; // pasar un txt con info y la pagina oficial de fiat
-    private string _hayquedefinirquehacelaclase2;
-
-    public FiatInfo(string name,string model,int year,string hayquedefinirquehacelaclase) : base(name,model,year)
+    
+    public FiatInfo(string name, string model, int year, string hayquedefinirquehacelaclase) : base(name, model, year)
     {
-        _model="Spazio TR 1.3";
-        _year=1988;
-        _name="Fiat 147";
+        _model = "Spazio TR 1.3";
+        _year = 1988;
+        _name = "Fiat 147";
+        _hayquedefinirquehacelaclase = hayquedefinirquehacelaclase;
     }
 
 

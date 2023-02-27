@@ -10,12 +10,12 @@ class Program
         string userAnswer=Console.ReadLine();
         if(userAnswer.Equals("Peugeot",StringComparison.InvariantCultureIgnoreCase))
         {
-            Car car1=new Car("","",0);
+            PeugeotInfo car1=new PeugeotInfo("","",0,"");
             Console.WriteLine(car1.GetCarInfo());
             return;
         }else if(userAnswer.Equals("Fiat",StringComparison.InvariantCultureIgnoreCase))
         {
-            Car car1=new Car("","",0);
+            FiatInfo car1=new FiatInfo("","",0,"");
             Console.WriteLine(car1.GetCarInfo());
             return;
         }else
