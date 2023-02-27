@@ -21,6 +21,7 @@ class Program
         }else
         {
             Console.WriteLine("Error. Please enter a valid choice");
+            Thread.Sleep(4000);
         }
 
         }
