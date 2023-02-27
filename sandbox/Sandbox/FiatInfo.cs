@@ -1,7 +1,7 @@
 public class FiatInfo : Car
 {
     private string _hayquedefinirquehacelaclase; // pasar un txt con info y la pagina oficial de fiat
-    
+
     public FiatInfo(string name, string model, int year, string hayquedefinirquehacelaclase) : base(name, model, year)
     {
         _model = "Spazio TR 1.3";
