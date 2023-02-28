@@ -25,8 +25,8 @@ class Program
 
                     break;
                 case "6":
-
-                    break;
+                    Console.WriteLine("Thanks  for using our program!");
+                    return;
                 default:
                     Console.Clear();
                     Console.WriteLine("Error, please enter a valid choice.");
