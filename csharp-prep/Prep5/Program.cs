@@ -10,6 +10,7 @@ class Program
         int Square = SquareNumber(FavoriteNumber);
         DisplayResult(Name, Square);
     }
+
     static void DisplayWelcome()
     {
         Console.WriteLine("Welcome to the program!");
@@ -17,9 +18,9 @@ class Program
     static string PromptUserName()
     {
         Console.Write("Please enter your name: ");
-        string name = Console.ReadLine();
-        return name;
+        return Console.ReadLine();
     }
+
     static int PromptUserNumber()
     {
         Console.Write("Please enter your favorite number: ");
@@ -27,13 +28,15 @@ class Program
         int valid = int.Parse(number);
         return valid;
     }
+
     static int SquareNumber(int x)
     {
-        int Square = x * x;
-        return Square;
+        return x * x;
     }
+
     static void DisplayResult(string Name, int Square)
     {
         Console.WriteLine($"{Name}, the square of your number is: {Square} ");
     }
+    
 }
