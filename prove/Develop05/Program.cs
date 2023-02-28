@@ -38,8 +38,16 @@ class Program
 
     public static string Menu()
     {
-        Console.WriteLine("1: Create new goal\n2: List Goals\n3: Save goals\n4: Load goals\n5: Record event \n6: Quit ");
+        Console.WriteLine("1: Create new goal\n2: List Goals\n3: Save goals\n4: Load goals\n5: Record event \n6: Quit");
         return Console.ReadLine();
     }
+
+    public static string GoalsMenu()
+    {
+        Console.WriteLine("The types of goals are:");
+        Console.WriteLine("1: Simple goal\n2: Eternal Goal\n3: Checklist goal");
+        return Console.ReadLine();
+    }
+
 
 }
