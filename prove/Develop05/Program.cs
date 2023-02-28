@@ -6,6 +6,7 @@ class Program
     {
         while (true)
         {
+            Console.Clear();
             string answer = Menu();
             switch (answer)
             {
@@ -29,7 +30,7 @@ class Program
                 default:
                     Console.Clear();
                     Console.WriteLine("Error, please enter a valid choice.");
-                    Thread.Sleep(4000);
+                    Thread.Sleep(3000);
                     break;
             }
         }
