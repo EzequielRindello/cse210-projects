@@ -3,28 +3,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        while (true)
+        // create different kinds of employees...
+        List<Employee> employees = new List<Employee>();
+        employees.Add(new HourlyEmployee());
+        employees.Add(new SalaryEmployee());
+
+        // get a custom calculation for each one
+        foreach (Employee employee in employees)
         {
-            Console.Clear();
-            Console.WriteLine("What model do you prefer:\nPeugeot\nFiat ");
-            string userAnswer = Console.ReadLine();
-            if (userAnswer.Equals("Peugeot", StringComparison.InvariantCultureIgnoreCase))
-            {
-                PeugeotInfo car1 = new PeugeotInfo("", "", 0, "");
-                Console.WriteLine(car1.GetCarInfo());
-                return;
-            }
-            else if (userAnswer.Equals("Fiat", StringComparison.InvariantCultureIgnoreCase))
-            {
-                FiatInfo car1 = new FiatInfo("", "", 0, "");
-                Console.WriteLine(car1.GetCarInfo());
-                return;
-            }
-            else
-            {
-                Console.WriteLine("Error. Please enter a valid choice");
-                Thread.Sleep(4000);
-            }
+            employee.DisplayName();
+            float pay = employee.CalculatePay();
+            Console.WriteLine(pay);
         }
     }
+
+/*     public static void DisplayEmpInfo(Employee employee)
+    {
+        float pay = employee.CalculatePay();
+        Console.WriteLine(pay);
+    } */
 }
