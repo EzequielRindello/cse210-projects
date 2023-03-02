@@ -43,14 +43,14 @@ class Program
     public static string Menu()
     {
         Console.WriteLine("Menu options:");
-        Console.WriteLine("1: Create new goal\n2: List Goals\n3: Save goals\n4: Load goals\n5: Record event \n6: Quit");
+        Console.WriteLine("   1: Create new goal\n   2: List Goals\n   3: Save goals\n   4: Load goals\n   5: Record event \n   6: Quit");
         return Console.ReadLine();
     }
 
     public static string GoalsMenu()
     {
         Console.WriteLine("The types of goals are:");
-        Console.WriteLine("1: Simple goal\n2: Eternal Goal\n3: Checklist goal");
+        Console.WriteLine("   1: Simple goal\n   2: Eternal Goal\n   3: Checklist goal");
         return Console.ReadLine();
     }
 
@@ -59,18 +59,22 @@ class Program
         if (x == "1")
         {
             Console.WriteLine("1");
+            return;
         }
         else if (x == "2")
         {
             Console.WriteLine("2");
+            return;
         }
         else if (x == "3")
         {
             Console.WriteLine("3");
+            return;
         }
         else
         {
             Console.WriteLine("Error.Please try agin");
+            Thread.Sleep(3000);
         }
     }
 
