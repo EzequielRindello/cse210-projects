@@ -16,12 +16,13 @@ class Program
             {
                 case "1":
                     string choice = GoalsMenu();
-                    
+                    RunChoice(choice);
                     break;
                 case "2":
 
                     break;
                 case "3":
+
                     break;
                 case "4":
 
@@ -54,5 +55,24 @@ class Program
         return Console.ReadLine();
     }
 
+    public static void RunChoice(string x)
+    {
+        if (x=="1")
+        {
+            Console.WriteLine("1");
+        }
+        else if (x=="2")
+        {
+            Console.WriteLine("2");
+        }
+        else if(x=="3")
+        {
+            Console.WriteLine("3");
+        }
+        else
+        {
+            Console.WriteLine("Error.Please try agin");
+        }
+    }
 
 }
