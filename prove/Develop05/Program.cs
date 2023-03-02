@@ -4,9 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<Goal> simpleGoal = new List<Goal>();
-        List<Goal> eternalGoal = new List<Goal>();
-        List<Goal> checklistGoal = new List<Goal>();
+        List<Goal> goals = new List<Goal>();
 
         while (true)
         {
@@ -57,15 +55,15 @@ class Program
 
     public static void RunChoice(string x)
     {
-        if (x=="1")
+        if (x == "1")
         {
             Console.WriteLine("1");
         }
-        else if (x=="2")
+        else if (x == "2")
         {
             Console.WriteLine("2");
         }
-        else if(x=="3")
+        else if (x == "3")
         {
             Console.WriteLine("3");
         }

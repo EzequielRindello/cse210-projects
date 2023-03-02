@@ -13,9 +13,9 @@ public class EternalGoal : Goal
         return "";
     }
 
-    public override string IsComplete()
+    public override bool IsComplete()
     {
-        return " ";
+        return true;
     }
 
 }
