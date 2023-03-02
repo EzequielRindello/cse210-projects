@@ -56,6 +56,8 @@ class Program
 
     public static void RunChoice(string x)
     {
+        Console.Clear();
+
         if (x == "1")
         {
             Console.WriteLine("1");
@@ -63,12 +65,10 @@ class Program
         }
         else if (x == "2")
         {
-            Console.WriteLine("2");
             return;
         }
         else if (x == "3")
         {
-            Console.WriteLine("3");
             return;
         }
         else
