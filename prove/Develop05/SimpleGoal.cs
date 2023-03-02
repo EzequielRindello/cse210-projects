@@ -6,4 +6,15 @@ public class SimpleGoal : Goal
         _description = description;
         _points = points;
     }
+
+    public override string RecordEvent()
+    {
+        return "";
+    }
+
+    public override string IsComplete()
+    {
+        return " ";
+    }
+
 }

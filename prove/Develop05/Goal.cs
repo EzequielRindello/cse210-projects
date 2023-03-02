@@ -1,4 +1,4 @@
-public class Goal
+public abstract class Goal
 {
     protected string _name;
     protected string _description;
@@ -10,5 +10,9 @@ public class Goal
         _description = description;
         _points = points;
     }
-    
+
+    public abstract string RecordEvent();
+
+    public abstract string IsComplete();
+
 }
