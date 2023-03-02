@@ -60,15 +60,17 @@ class Program
 
         if (x == "1")
         {
-            Console.WriteLine("1");
+            SimpleGoal simpleGoal = new SimpleGoal("", "", 0, false);
             return;
         }
         else if (x == "2")
         {
+            EternalGoal eternalGoal = new EternalGoal("", "", 0, false);
             return;
         }
         else if (x == "3")
         {
+            ChecklistGoal checklistGoal = new ChecklistGoal("", "", 0, false);
             return;
         }
         else

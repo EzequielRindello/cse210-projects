@@ -8,9 +8,9 @@ public class SimpleGoal : Goal
         _isComplete = isComplete;
     }
 
-    public override string RecordEvent()
+    public override string RecordEvent(string x)
     {
-        return "";
+        return x;
     }
 
     public override bool IsComplete()

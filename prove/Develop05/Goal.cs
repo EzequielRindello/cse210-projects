@@ -13,7 +13,7 @@ public abstract class Goal
         _isComplete = isComplete;
     }
 
-    public abstract string RecordEvent();
+    public abstract string RecordEvent(string x);
 
     public abstract bool IsComplete();
 
