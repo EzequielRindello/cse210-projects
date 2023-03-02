@@ -15,7 +15,8 @@ class Program
             switch (answer)
             {
                 case "1":
-
+                    string choice = GoalsMenu();
+                    
                     break;
                 case "2":
 
@@ -46,12 +47,12 @@ class Program
         return Console.ReadLine();
     }
 
-    // public static string GoalsMenu()
-    // {
-    //     Console.WriteLine("The types of goals are:");
-    //     Console.WriteLine("1: Simple goal\n2: Eternal Goal\n3: Checklist goal");
-    //     return Console.ReadLine();
-    // }
+    public static string GoalsMenu()
+    {
+        Console.WriteLine("The types of goals are:");
+        Console.WriteLine("1: Simple goal\n2: Eternal Goal\n3: Checklist goal");
+        return Console.ReadLine();
+    }
 
 
 }
