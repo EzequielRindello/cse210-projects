@@ -1,6 +1,6 @@
 public class BreathingActivity : Activity
 {
-    public BreathingActivity(string name, string description, int duration) : base(name, description)
+    public BreathingActivity(string name, string description) : base(name, description)
     {
         _name = "Breathing activity.";
         _description = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
@@ -39,7 +39,7 @@ public class BreathingActivity : Activity
             Console.Write($"\rBreathe out...{i} ");
             Thread.Sleep(1000);
         }
-        
+
         Console.Write($"\rBreathe out... ");
         Console.WriteLine("");
         Console.WriteLine("");

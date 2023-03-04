@@ -19,7 +19,7 @@ class Program
             {
                 case "1":
                     Console.Clear();
-                    BreathingActivity primera = new BreathingActivity("", "", 0);
+                    BreathingActivity primera = new BreathingActivity("", "");
                     primera.DisplayStartingMessageAndGetTime();
                     Console.Clear();
                     primera.GetReadyMessage();

@@ -8,7 +8,7 @@ public class Activity
     {
         _name = name;
         _description = description;
-        
+
     }
 
     public void DisplayStartingMessageAndGetTime()
@@ -18,7 +18,8 @@ public class Activity
         Console.WriteLine(_description);
         Console.WriteLine();
         Console.WriteLine("How long would you like to do in this sesion?");
-        int _duration = Console.Read();
+        int time = Console.Read();
+        _duration = time;
     }
 
     public void GetReadyMessage()
@@ -81,5 +82,5 @@ public class Activity
         Console.WriteLine($"You have completed {_duration} seconds of the {_name} ");
         PauseSpinner();
     }
-    
+
 }
