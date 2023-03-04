@@ -11,7 +11,7 @@ public class Activity
         _duration = duration;
     }
 
-    public void DisplayStartingMessage()
+    public void DisplayStartingMessageAndGetTime()
     {
         Console.WriteLine(_name);
         Console.WriteLine();

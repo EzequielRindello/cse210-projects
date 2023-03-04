@@ -20,7 +20,7 @@ class Program
                 case "1":
                     Console.Clear();
                     BreathingActivity primera = new BreathingActivity("", "", 0);
-                    primera.DisplayStartingMessage();
+                    primera.DisplayStartingMessageAndGetTime();
                     Console.Clear();
                     primera.GetReadyMessage();
                     primera.RunBreathingActivity();
@@ -29,7 +29,7 @@ class Program
                 case "2":
                     Console.Clear();
                     ReflectingActivity segunda = new ReflectingActivity("", "", 0, prompsReflecting, questionsReflecting);
-                    segunda.DisplayStartingMessage();
+                    segunda.DisplayStartingMessageAndGetTime();
                     Console.Clear();
                     segunda.GetReadyMessage();
                     segunda.RunReflectingActivity();
@@ -38,7 +38,7 @@ class Program
                 case "3":
                     Console.Clear();
                     ListingActivity tercera = new ListingActivity("", "", 0, prompsListing, listing);
-                    tercera.DisplayStartingMessage();
+                    tercera.DisplayStartingMessageAndGetTime();
                     Console.Clear();
                     tercera.GetReadyMessage();
                     tercera.RunListingActivity();
