@@ -62,7 +62,7 @@ public class Activity
 
             Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
 
-            if (counter == 20)
+            if (counter == 5)
             {
                 break;
             }
