@@ -6,7 +6,7 @@ public class GroundingActivity : Activity
         it wont have time and atributes to
         be different from the others :) */
 
-    public GroundingActivity(string name, string description, int duration) : base(name, description, duration)
+    public GroundingActivity(string name, string description) : base(name, description)
     {
         _name = "Grounding ctivity";
         _description = "This five-step exercise can be very helpful during periods of anxiety or panic by helping to ground you in the present when your mind is bouncing around between various anxious thoughts.";

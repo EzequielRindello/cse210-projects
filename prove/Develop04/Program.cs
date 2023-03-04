@@ -28,7 +28,7 @@ class Program
                     break;
                 case "2":
                     Console.Clear();
-                    ReflectingActivity segunda = new ReflectingActivity("", "", 0, prompsReflecting, questionsReflecting);
+                    ReflectingActivity segunda = new ReflectingActivity("", "", prompsReflecting, questionsReflecting);
                     segunda.DisplayStartingMessageAndGetTime();
                     Console.Clear();
                     segunda.GetReadyMessage();
@@ -37,7 +37,7 @@ class Program
                     break;
                 case "3":
                     Console.Clear();
-                    ListingActivity tercera = new ListingActivity("", "", 0, prompsListing, listing);
+                    ListingActivity tercera = new ListingActivity("", "", prompsListing, listing);
                     tercera.DisplayStartingMessageAndGetTime();
                     Console.Clear();
                     tercera.GetReadyMessage();
@@ -46,7 +46,7 @@ class Program
                     break;
                 case "4":
                     Console.Clear();
-                    GroundingActivity cuarta = new GroundingActivity("", "", 0);
+                    GroundingActivity cuarta = new GroundingActivity("", "");
                     cuarta.SpecialStartingMessage();
                     cuarta.GetReadyMessage();
                     cuarta.RunGroundingActivity();
