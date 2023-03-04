@@ -17,9 +17,15 @@ public class Activity
         Console.WriteLine();
         Console.WriteLine(_description);
         Console.WriteLine();
-        Console.WriteLine("How long would you like to do in this sesion?");
-        int time = Console.Read();
-        _duration = time;
+        SetDuration();
+    }
+
+    public void SetDuration()
+    {
+        Console.WriteLine("How long in senconds, would you like for your session?");
+        string read = Console.ReadLine();
+        int seconds = Int32.Parse(read);
+        this._duration = seconds;
     }
 
     public void GetReadyMessage()
@@ -56,7 +62,7 @@ public class Activity
 
             Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
 
-            if (counter == 25)
+            if (counter == 20)
             {
                 break;
             }
