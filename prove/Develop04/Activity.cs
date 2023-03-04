@@ -17,8 +17,8 @@ public class Activity
         Console.WriteLine();
         Console.WriteLine(_description);
         Console.WriteLine();
-        Console.WriteLine("Enter any key to continue. All activities last 30 seconds by default :)");
-        string none = Console.ReadLine();
+        Console.WriteLine("How long would you like to do in this sesion?");
+        int _duration = Console.Read();
     }
 
     public void GetReadyMessage()
