@@ -14,7 +14,7 @@ public abstract class Goal
     }
 
     public abstract string CreateGoal(string g);
-    
+
     public abstract string RecordEvent(string x);
 
     public abstract bool IsComplete();

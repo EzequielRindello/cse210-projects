@@ -10,6 +10,9 @@ public class SimpleGoal : Goal
 
     public override string CreateGoal(string x)
     {
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
         return x;
     }
 
@@ -22,5 +25,4 @@ public class SimpleGoal : Goal
     {
         return true;
     }
-
 }

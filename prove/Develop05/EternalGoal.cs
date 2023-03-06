@@ -22,5 +22,4 @@ public class EternalGoal : Goal
     {
         return true;
     }
-
 }
