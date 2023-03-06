@@ -11,6 +11,11 @@ public class ChecklistGoal : Goal
         _isComplete = isComplete;
     }
 
+    public override string CreateGoal(string x)
+    {
+        return x;
+    }
+
     public override string RecordEvent(string x)
     {
         return x;

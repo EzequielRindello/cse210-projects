@@ -13,6 +13,8 @@ public abstract class Goal
         _isComplete = isComplete;
     }
 
+    public abstract string CreateGoal(string g);
+    
     public abstract string RecordEvent(string x);
 
     public abstract bool IsComplete();
