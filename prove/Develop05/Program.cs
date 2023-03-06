@@ -14,7 +14,7 @@ class Program
             {
                 case "1":
                     string choice = GoalsMenu();
-                    RunChoice(choice);
+                    RunChoice(choice, goals);
                     break;
                 case "2":
 
@@ -54,18 +54,22 @@ class Program
         return Console.ReadLine();
     }
 
-    public static void RunChoice(string x)
+    public static void RunChoice(string x, List<Goal> goals)
     {
         Console.Clear();
 
         if (x == "1")
         {
             SimpleGoal simpleGoal = new SimpleGoal("", "", 0, false);
+            simpleGoal.CreateGoal();
+            goals.Add(simpleGoal);
             return;
         }
         else if (x == "2")
         {
             EternalGoal eternalGoal = new EternalGoal("", "", 0, false);
+            eternalGoal.CreateGoal();
+            goals.Add(eternalGoal);
             return;
         }
         else if (x == "3")
