@@ -18,24 +18,23 @@ public class Goal
     {
         Console.WriteLine("What is the name of your goal?");
         string z = Console.ReadLine();
-        this._name = z;
-        return _name;
+        return this._name = z;
+        
     }
 
     public string GetDescription()
     {
         Console.WriteLine("What is a short description of your goal?");
         string z = Console.ReadLine();
-        this._description = z;
-        return _description;
+        return this._description = z;
+        
     }
 
     public int GetPoints()
     {
         Console.WriteLine("what is the amount of points associated with your goal?");
         int z = Console.Read();
-        this._points = z;
-        return _points;
+        return this._points = z;
     }
 
     public virtual string CreateGoal()

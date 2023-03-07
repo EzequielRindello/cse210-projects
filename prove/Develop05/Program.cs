@@ -73,7 +73,7 @@ class Program
         }
         else if (x == "3")
         {
-            ChecklistGoal g3 = new ChecklistGoal("", "", 0, false);
+            ChecklistGoal g3 = new ChecklistGoal("", "", 0, false, 0, 0);
             g3.CreateGoal();
             goals.Add(g3);
         }
