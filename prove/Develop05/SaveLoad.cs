@@ -11,4 +11,14 @@ public class SaveLoad
     {
         _file.ForEach(Console.WriteLine);
     }
+
+    public void SaveList()
+    {
+
+    }
+
+    public void LoadList()
+    {
+
+    }
 }

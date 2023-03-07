@@ -17,15 +17,18 @@ class Program
                     RunChoice(choice, goals);
                     break;
                 case "2":
-                    SaveLoad file = new SaveLoad(goals);
-                    file.DisplayList();
-                    Thread.Sleep(4000);
+                    SaveLoad file1 = new SaveLoad(goals);
+                    file1.DisplayList();
+                    Console.WriteLine("Please enter any key to continue.");
+                    string none = Console.ReadLine();
                     break;
                 case "3":
-
+                    SaveLoad file2 = new SaveLoad(goals);
+                    file2.SaveList();
                     break;
                 case "4":
-
+                    SaveLoad file3 = new SaveLoad(goals);
+                    file3.LoadList();
                     break;
                 case "5":
 
