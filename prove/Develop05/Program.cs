@@ -17,7 +17,8 @@ class Program
                     RunChoice(choice, goals);
                     break;
                 case "2":
-                    DisplayList(goals);
+                    SaveLoad file = new SaveLoad(goals);
+                    file.DisplayList();
                     Thread.Sleep(4000);
                     break;
                 case "3":
@@ -81,8 +82,4 @@ class Program
 
     }
 
-    public static void DisplayList(List<string> goals)
-    {
-        goals.ForEach(Console.WriteLine);
-    }
 }
