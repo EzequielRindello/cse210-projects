@@ -22,7 +22,7 @@ public class ChecklistGoal : Goal
 
     public int GetHowManyTimes()
     {
-        Console.WriteLine("what is the amount of points associated with your goal?");
+        Console.WriteLine("How many times do you have to complete this goal to get the bonus?");
         int z = Console.Read();
         this._howManyTimes = z;
         return _howManyTimes;
@@ -30,7 +30,7 @@ public class ChecklistGoal : Goal
 
     public int GetBonus()
     {
-        Console.WriteLine("what is the amount of points associated with your goal?");
+        Console.WriteLine("What is the bonus associated for this goal?");
         int z = Console.Read();
         this._bonus = z;
         return _bonus;
