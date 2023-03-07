@@ -11,7 +11,6 @@ class Program
         // get a custom calculation for each one
         foreach (Employee employee in employees)
         {
-            employee.DisplayName();
             float pay = employee.CalculatePay();
             Console.WriteLine(pay);
         }
