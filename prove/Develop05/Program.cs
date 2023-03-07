@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<Goal> goals = new List<Goal>();
+        List<string> goals = new  List<string>();
 
         while (true)
         {
@@ -55,37 +55,34 @@ class Program
         return Console.ReadLine();
     }
 
-    public static void RunChoice(string x, List<Goal> goals)
+    public static void RunChoice(string x, List<string> goals)
     {
         Console.Clear();
 
         if (x == "1")
         {
             SimpleGoal g1 = new SimpleGoal("", "", 0, false);
-            g1.CreateGoal();
-            goals.Add(g1);
+            string a1 = g1.CreateGoal();
+            goals.Add(a1);
         }
         else if (x == "2")
         {
             EternalGoal g2 = new EternalGoal("", "", 0, false);
-            g2.CreateGoal();
-            goals.Add(g2);
+            string a2 = g2.CreateGoal();
+            goals.Add(a2);
         }
         else if (x == "3")
         {
             ChecklistGoal g3 = new ChecklistGoal("", "", 0, false, 0, 0);
-            g3.CreateGoal();
-            goals.Add(g3);
+            string a3 = g3.CreateGoal();
+            goals.Add(a3);;
         }
         else { }
 
     }
 
-    public static void DisplayList(List<Goal> goals)
+    public static void DisplayList(List<string> goals)
     {
-        foreach (Goal s in goals)
-        {
-            Console.WriteLine(s);
-        }
+        goals.ForEach(Console.WriteLine);
     }
 }
