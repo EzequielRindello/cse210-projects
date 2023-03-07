@@ -10,7 +10,9 @@ public class SimpleGoal : Goal
 
     public override string CreateGoal()
     {
-        string x = "[ ]" + " " + _name + " " + "(" + _description + _points + ")";
+        string x = "[ ]" + " " + _name + " " + "(" + _description + ")" + " " + _points;
+        Console.WriteLine(x);
+        Thread.Sleep(3000);
         return this._goal = x;
     }
 
