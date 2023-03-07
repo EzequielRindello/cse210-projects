@@ -61,21 +61,19 @@ class Program
 
         if (x == "1")
         {
-            SimpleGoal simpleGoal = new SimpleGoal("", "", 0, false);
-
-            return;
+            SimpleGoal g1 = new SimpleGoal("", "", 0, false);
+            g1.CreateGoal();
+            goals.Add(g1);
         }
         else if (x == "2")
         {
-            EternalGoal eternalGoal = new EternalGoal("", "", 0, false);
-            eternalGoal.CreateGoal();
-            goals.Add(eternalGoal);
-            return;
+            EternalGoal g2 = new EternalGoal("", "", 0, false);
+            g2.CreateGoal();
+            goals.Add(g2);
         }
         else if (x == "3")
         {
-            ChecklistGoal checklistGoal = new ChecklistGoal("", "", 0, false);
-            return;
+            ChecklistGoal g3 = new ChecklistGoal("", "", 0, false);
         }
     }
 

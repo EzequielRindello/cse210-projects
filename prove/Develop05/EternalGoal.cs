@@ -10,9 +10,6 @@ public class EternalGoal : Goal
 
     public override string CreateGoal()
     {
-        GetName();
-        GetDescription();
-        GetPoints();
         string x = "[ ]" + " " + _name + " " + "(" + _description + _points + ")";
         this._goal = x;
         return _goal;

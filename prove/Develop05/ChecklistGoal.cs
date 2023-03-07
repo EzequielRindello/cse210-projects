@@ -8,16 +8,13 @@ public class ChecklistGoal : Goal
         _name = GetName();
         _description = GetDescription();
         _points = GetPoints();
+        _bonus = GetBonus();
+        _howManyTimes = GetHowManyTimes();
         _isComplete = isComplete;
     }
 
     public override string CreateGoal()
     {
-        GetName();
-        GetDescription();
-        GetPoints();
-        GetHowManyTimes();
-        GetBonus();
         string x = "[ ]" + " " + _name + " " + "(" + _description + _points + ")";
         this._goal = x;
         return _goal;
