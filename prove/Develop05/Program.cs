@@ -74,7 +74,10 @@ class Program
         else if (x == "3")
         {
             ChecklistGoal g3 = new ChecklistGoal("", "", 0, false);
+            g3.CreateGoal();
         }
+        else { }
+
     }
 
     public static void DisplayList(List<Goal> goals)
