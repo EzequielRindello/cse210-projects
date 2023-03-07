@@ -17,7 +17,8 @@ class Program
                     RunChoice(choice, goals);
                     break;
                 case "2":
-
+                    DisplayList(goals);
+                    Thread.Sleep(4000);
                     break;
                 case "3":
 
@@ -61,8 +62,7 @@ class Program
         if (x == "1")
         {
             SimpleGoal simpleGoal = new SimpleGoal("", "", 0, false);
-            simpleGoal.CreateGoal();
-            goals.Add(simpleGoal);
+
             return;
         }
         else if (x == "2")
@@ -77,11 +77,13 @@ class Program
             ChecklistGoal checklistGoal = new ChecklistGoal("", "", 0, false);
             return;
         }
-        else
-        {
-            Console.WriteLine("Error.Please try agin");
-            Thread.Sleep(3000);
-        }
     }
 
+    public static void DisplayList(List<Goal> goals)
+    {
+        foreach (Goal s in goals)
+        {
+            Console.WriteLine(s);
+        }
+    }
 }

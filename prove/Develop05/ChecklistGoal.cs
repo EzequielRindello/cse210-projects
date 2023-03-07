@@ -13,7 +13,30 @@ public class ChecklistGoal : Goal
 
     public override string CreateGoal()
     {
-        return x;
+        GetName();
+        GetDescription();
+        GetPoints();
+        GetHowManyTimes();
+        GetBonus();
+        string x = "[ ]" + " " + _name + " " + "(" + _description + _points + ")";
+        this._goal = x;
+        return _goal;
+    }
+
+    public int GetHowManyTimes()
+    {
+        Console.WriteLine("what is the amount of points associated with your goal?");
+        int z = Console.Read();
+        this._howManyTimes = z;
+        return _howManyTimes;
+    }
+
+    public int GetBonus()
+    {
+        Console.WriteLine("what is the amount of points associated with your goal?");
+        int z = Console.Read();
+        this._bonus = z;
+        return _bonus;
     }
 
     public override int RecordEvent()
