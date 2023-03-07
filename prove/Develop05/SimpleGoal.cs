@@ -11,8 +11,7 @@ public class SimpleGoal : Goal
     public override string CreateGoal()
     {
         string x = "[ ]" + " " + _name + " " + "(" + _description + _points + ")";
-        this._goal = x;
-        return _goal;
+        return this._goal = x;
     }
 
     public override int RecordEvent()
