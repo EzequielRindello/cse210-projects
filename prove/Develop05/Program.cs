@@ -75,6 +75,7 @@ class Program
         {
             ChecklistGoal g3 = new ChecklistGoal("", "", 0, false);
             g3.CreateGoal();
+            goals.Add(g3);
         }
         else { }
 
