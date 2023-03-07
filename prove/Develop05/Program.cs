@@ -17,21 +17,21 @@ class Program
                     RunChoice(choice, goals);
                     break;
                 case "2":
-                    SaveLoad file1 = new SaveLoad(goals);
-                    file1.DisplayList();
+                    SaveLoad option1 = new SaveLoad(goals);
+                    option1.DisplayList();
                     Console.WriteLine("Please enter any key to continue.");
                     string none = Console.ReadLine();
                     break;
                 case "3":
-                    SaveLoad file2 = new SaveLoad(goals);
-                    file2.SaveList();
+                    SaveLoad option2 = new SaveLoad(goals);
+                    option2.SaveList();
                     break;
                 case "4":
-                    SaveLoad file3 = new SaveLoad(goals);
-                    file3.LoadList();
+                    SaveLoad option3 = new SaveLoad(goals);
+                    option3.LoadList();
                     break;
                 case "5":
-
+                    
                     break;
                 case "6":
                     Console.WriteLine("Thanks  for using our program!");
