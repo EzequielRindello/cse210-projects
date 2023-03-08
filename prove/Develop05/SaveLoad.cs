@@ -14,17 +14,18 @@ public class SaveLoad
 
     public void SaveList()
     {
-        // Sould be goals.txt
-        Console.WriteLine("What is the name of your filename:");
-        string filename = Console.ReadLine();
-        using (StreamWriter outputFile = new StreamWriter(filename))
+        Console.WriteLine("Enter the name of the file to save the goals:");
+        string fileName = Console.ReadLine();
+        using (StreamWriter outputFile = new StreamWriter(fileName))
         {
-            for (int i = 0; i < _file.Count; i++)
+            foreach (Goal goal in _file)
             {
-                string line = _file[i];
-                outputFile.WriteLine(line);
+                outputFile.WriteLine(goal.ToString());
             }
         }
+        Console.WriteLine("Goals saved to file successfully.");
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
     }
 
     public List<Goal> LoadList()
