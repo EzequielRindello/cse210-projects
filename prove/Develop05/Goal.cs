@@ -19,7 +19,7 @@ public class Goal
         Console.WriteLine("What is the name of your goal?");
         string z = Console.ReadLine();
         return this._name = z;
-        
+
     }
 
     public string GetDescription()
@@ -27,7 +27,7 @@ public class Goal
         Console.WriteLine("What is a short description of your goal?");
         string z = Console.ReadLine();
         return this._description = z;
-        
+
     }
 
     public int GetPoints()
