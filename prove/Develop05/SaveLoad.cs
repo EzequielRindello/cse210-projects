@@ -1,8 +1,8 @@
 public class SaveLoad
 {
-    private List<string> _file;
+    private List<Goal> _file;
 
-    public SaveLoad(List<string> file)
+    public SaveLoad(List<Goal> file)
     {
         this._file = file;
     }
@@ -29,7 +29,7 @@ public class SaveLoad
 
     public List<string> LoadList()
     {
-        // Sould be myFile.txt
+        // Sould be goals.txt
         Console.WriteLine("What is the name of your filename:");
         string filename = Console.ReadLine();
         var gFile = File.ReadAllLines(filename);
