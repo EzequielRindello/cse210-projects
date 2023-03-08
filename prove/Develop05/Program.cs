@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<string> goals = new  List<string>();
+        List<string> goals = new List<string>();
 
         while (true)
         {
@@ -28,10 +28,10 @@ class Program
                     break;
                 case "4":
                     SaveLoad option3 = new SaveLoad(goals);
-                    option3.LoadList();
+                    goals = option3.LoadList();
                     break;
                 case "5":
-                    
+
                     break;
                 case "6":
                     Console.WriteLine("Thanks  for using our program!");
@@ -79,7 +79,7 @@ class Program
         {
             ChecklistGoal g3 = new ChecklistGoal("", "", 0, false, 0, 0);
             string a3 = g3.CreateGoal();
-            goals.Add(a3);;
+            goals.Add(a3); ;
         }
         else { }
 

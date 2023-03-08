@@ -14,11 +14,26 @@ public class SaveLoad
 
     public void SaveList()
     {
-
+        // Sould be goals.txt
+        Console.WriteLine("What is the name of your filename:");
+        string filename = Console.ReadLine();
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            for (int i = 0; i < _file.Count; i++)
+            {
+                string line = _file[i];
+                outputFile.WriteLine(line);
+            }
+        }
     }
 
-    public void LoadList()
+    public List<string> LoadList()
     {
-
+        // Sould be myFile.txt
+        Console.WriteLine("What is the name of your filename:");
+        string filename = Console.ReadLine();
+        var gFile = File.ReadAllLines(filename);
+        var gList = new List<string>(gFile);
+        return gList;
     }
 }
