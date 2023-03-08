@@ -7,9 +7,9 @@ public class SimpleGoal : Goal
         this._name = GetName();
         this._description = GetDescription();
         this._points = GetPoints();
-        string fullGoal = _name + " " + "(" + _description + ")" + " " + _points;
-        this._goal = fullGoal;
-        return fullGoal;
+        string goal = _name + " " + "(" + _description + ")" + " " + _points;
+        this._goal = goal; // set the _goal field
+        return goal;
     }
 
     public override int RecordEvent()

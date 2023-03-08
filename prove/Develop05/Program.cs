@@ -30,7 +30,7 @@ class Program
                     break;
                 case "4": // Load goals from a file.
                     SaveLoad option3 = new SaveLoad(goals);
-                    goals = option3.LoadList();
+                    //goals = option3.LoadList();
                     break;
                 case "5": // Marks  a goal completed.
 
