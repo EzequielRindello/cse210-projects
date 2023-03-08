@@ -39,7 +39,7 @@ public class GroundingActivity : Activity
     public void PressToContinue(string none)
     {
         Console.WriteLine("Press enter to continue.");
-        none = Console.ReadLine();
+        Console.ReadKey();
     }
 
     public void SpecialStartingMessage()
@@ -49,7 +49,7 @@ public class GroundingActivity : Activity
         Console.WriteLine(_description);
         Console.WriteLine();
         Console.WriteLine("This program is different from the others since it does not have a predefined time, just relax and take the time you need for each answer. Enter any key when you are ready.");
-        string none = Console.ReadLine();
+        Console.ReadKey();
     }
 
     public void SpecialEndingMessage()

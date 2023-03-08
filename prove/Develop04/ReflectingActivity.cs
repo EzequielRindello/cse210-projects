@@ -56,7 +56,7 @@ public class ReflectingActivity : Activity
         Console.WriteLine("Consider the following promp: ");
         Console.WriteLine($"--- {_ramdomPromp} ---");
         Console.WriteLine("When you have somethig in your mind enter any key to continue.");
-        string none = Console.ReadLine();
+        Console.ReadKey();
     }
 
     public void DisplayQuestion()

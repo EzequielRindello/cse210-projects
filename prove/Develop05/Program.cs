@@ -20,7 +20,7 @@ class Program
                     SaveLoad option1 = new SaveLoad(goals);
                     option1.DisplayList();
                     Console.WriteLine("Please enter any key to continue.");
-                    string none = Console.ReadLine();
+                    Console.ReadKey();
                     break;
                 case "3":
                     SaveLoad option2 = new SaveLoad(goals);
