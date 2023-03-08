@@ -27,7 +27,7 @@ public class SaveLoad
         }
     }
 
-    public List<string> LoadList()
+    public List<Goal> LoadList()
     {
         // Sould be goals.txt
         Console.WriteLine("What is the name of your filename:");
