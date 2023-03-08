@@ -6,12 +6,13 @@ public class Goal
     protected bool _isComplete;
     protected string _goal;
 
-    public Goal(string name, string description, int points, bool isComplete)
+    public Goal(string name, string description, int points, bool isComplete, string goal)
     {
         _name = name;
         _description = description;
         _points = points;
         _isComplete = isComplete;
+        _goal = goal;
     }
 
     public string GetName()
@@ -33,7 +34,7 @@ public class Goal
     public int GetPoints()
     {
         Console.WriteLine("what is the amount of points associated with your goal?");
-        int z = Console.Read();
+        int z = int.Parse(Console.ReadLine());
         return this._points = z;
     }
 

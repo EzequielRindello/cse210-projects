@@ -1,12 +1,6 @@
 public class EternalGoal : Goal
 {
-    public EternalGoal(string name, string description, int points, bool isComplete) : base(name, description, points, isComplete)
-    {
-        _name = GetName();
-        _description = GetDescription();
-        _points = GetPoints();
-        _isComplete = isComplete;
-    }
+    public EternalGoal(string name, string description, int points, bool isComplete, string goal) : base(name, description, points, isComplete, goal) { }
 
     public override string CreateGoal()
     {
