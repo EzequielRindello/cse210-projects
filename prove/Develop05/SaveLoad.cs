@@ -9,10 +9,10 @@ public class SaveLoad
 
     public void DisplayList()
     {
-       // _file.ForEach(Console.WriteLine);
+        // _file.ForEach(Console.WriteLine);
         foreach (Goal s in _file)
         {
-            Console.WriteLine(s);
+            Console.WriteLine();
         }
     }
 
