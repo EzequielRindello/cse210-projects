@@ -1,2 +1,2 @@
-Iglesia (Asistir este domingo) 100
-Templo (Asistir al templo) 1000
+Iglesia, (asistir los domingos) ,1000
+Templo, (Asisitr al templo) ,1000

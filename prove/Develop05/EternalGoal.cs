@@ -7,7 +7,7 @@ public class EternalGoal : Goal
         this._name = SetName();
         this._description = SetDescription();
         this._points = SetPoints();
-        this._goal = _name + "," + " (" + _description + ") " + "," + _points;
+        this._goal = $"{_name},{_description},{_points},{_isComplete}";
         return this._goal;
     }
 

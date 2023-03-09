@@ -72,9 +72,14 @@ public class Goal
         return _goal;
     }
 
-    public string GetGoal()
+    public virtual string GetGoal()
     {
         return _goal;
+    }
+
+    public string Display()
+    {
+        return $"[ ] {_name} ({_description} )";
     }
 
     public virtual void RecordEvent()
