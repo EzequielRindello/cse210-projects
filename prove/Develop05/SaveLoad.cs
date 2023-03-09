@@ -11,7 +11,7 @@ public class SaveLoad
     {
         foreach (Goal s in _file)
         {
-            string goal=s.SetGoal();
+            string goal=s.GetGoal();
             Console.WriteLine(goal);
         }
     }
