@@ -86,5 +86,4 @@ public class Goal
     {
         return _isComplete;
     }
-
 }

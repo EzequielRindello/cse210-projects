@@ -25,6 +25,7 @@ public class SaveLoad
             foreach (Goal goal in _file)
             {
                 outputFile.WriteLine(goal.ToString());
+                // saves the name.
             }
         }
         Console.WriteLine("Goals saved to file successfully.");
