@@ -4,35 +4,29 @@ class Program
 {
     static void Main(string[] args)
     {
-        // List to store/load goals entered.
-        List<Goal> goals = new List<Goal>();
-        // Loop with a switch that takes input from the user to select a choice from the menu.
-        while (true)
+        List<Goal> goals = new List<Goal>(); // List to store/load goals entered.
+        int totalPoints = 0;
+
+        while (true) // Loop with a switch that takes input from the user to select a choice from the menu.
         {
-            // Clear the console and executes a case from the switch.
-            Console.Clear();
-            string answer = Menu();
-            switch (answer)
+            Console.Clear(); // Clear the console and executes a case from the switch.
+            string userInput = Menu(totalPoints); // Calls the Menu method and return a value to execute the switch block.
+            switch (userInput)
             {
                 case "1": // Creates a new goal.
                     string choice = GoalsMenu();
-                    RunChoice(choice, goals);
+                    RunGoalChoice(choice, goals);
                     break;
                 case "2": // List Goals.
-                    SaveLoad option1 = new SaveLoad(goals);
-                    option1.DisplayList();
-                    Console.WriteLine("Please enter any key to continue.");
-                    Console.ReadKey();
+                    RunLoadSaveChoice(userInput, goals);
                     break;
                 case "3": // Save goals to a file.
-                    SaveLoad option2 = new SaveLoad(goals);
-                    option2.SaveList();
+                    RunLoadSaveChoice(userInput, goals);
                     break;
                 case "4": // Load goals from a file.
-                    SaveLoad option3 = new SaveLoad(goals);
-                    goals = option3.LoadList();
+                    RunLoadSaveChoice(userInput, goals);
                     break;
-                case "5": // Marks  a goal completed.
+                case "5": // Marks  a goal completed and add the points.
 
                     break;
                 case "6": // Quits the program.
@@ -42,8 +36,9 @@ class Program
         }
     }
 
-    public static string Menu() // Displays the main menu.
+    public static string Menu(int totalPoints) // Displays the main menu.
     {
+        Console.WriteLine($"You have {totalPoints} points.");
         Console.WriteLine("Menu options:");
         Console.WriteLine("   1: Create new goal\n   2: List Goals\n   3: Save goals\n   4: Load goals\n   5: Record event \n   6: Quit");
         return Console.ReadLine();
@@ -56,7 +51,7 @@ class Program
         return Console.ReadLine();
     }
 
-    public static void RunChoice(string userInput, List<Goal> goals)
+    public static void RunGoalChoice(string userInput, List<Goal> goals) // Select base on the user input what goal to create.
     {
         Console.Clear();
 
@@ -77,6 +72,39 @@ class Program
             Goal goal3 = new ChecklistGoal("", "", 0, false, "", 0, 0);
             goal3.SetGoal();
             goals.Add(goal3);
+        }
+        else
+        {
+            Console.WriteLine("Error.");
+            Thread.Sleep(2000);
+        }
+    }
+
+    public static void RunLoadSaveChoice(string userInput, List<Goal> goals) // Select base on the user input what goal to create.
+    {
+        Console.Clear();
+
+        if (userInput == "2")
+        {
+            SaveLoad option1 = new SaveLoad(goals);
+            option1.DisplayList();
+            Console.WriteLine("Please enter any key to continue.");
+            Console.ReadKey();
+        }
+        else if (userInput == "3")
+        {
+            SaveLoad option2 = new SaveLoad(goals);
+            option2.SaveList();
+        }
+        else if (userInput == "4")
+        {
+            SaveLoad option3 = new SaveLoad(goals);
+            goals = option3.LoadList();
+        }
+        else
+        {
+            Console.WriteLine("Error.");
+            Thread.Sleep(2000);
         }
     }
 }
