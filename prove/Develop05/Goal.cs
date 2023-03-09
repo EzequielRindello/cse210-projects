@@ -42,9 +42,24 @@ public class Goal
 
     public int SetPoints()
     {
-        Console.WriteLine("what is the amount of points associated with your goal?");
-        int z = int.Parse(Console.ReadLine());
-        return this._points = z;
+        int number;
+
+        while (true)
+        {
+            Console.WriteLine("what is the amount of points associated with your goal?");
+            string input = Console.ReadLine();
+
+            try
+            {
+                number = Convert.ToInt32(input);
+                break;
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+            }
+        }
+        return this._points = number;
     }
 
     public int GetPoints()
