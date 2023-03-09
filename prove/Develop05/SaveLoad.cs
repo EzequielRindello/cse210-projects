@@ -18,7 +18,7 @@ public class SaveLoad
         {
             listNumber++;
             string goal = s.Display();
-            Console.WriteLine($"{listNumber}. [ ] {goal}");
+            Console.WriteLine($"{listNumber}. {goal}");
         }
     }
 

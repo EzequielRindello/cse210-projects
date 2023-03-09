@@ -1,2 +1,2 @@
-Iglesia, (asistir los domingos) ,1000
-Templo, (Asisitr al templo) ,1000
+Iglesia,Ir a la iglesia,100,False
+Templo,Asisitir regularmente al templo,1000,False
