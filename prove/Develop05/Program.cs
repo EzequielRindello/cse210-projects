@@ -99,7 +99,7 @@ class Program
         else if (userInput == "4")
         {
             SaveLoad option3 = new SaveLoad(goals, totalPoints);
-            goals = option3.LoadList();
+            //option3.LoadList();
         }
         else
         {
