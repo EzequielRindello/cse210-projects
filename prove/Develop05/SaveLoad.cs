@@ -1,6 +1,7 @@
 public class SaveLoad
 {
     private List<Goal> _file;
+    private int _totalPoints = 0;
 
     public SaveLoad(List<Goal> file)
     {
@@ -18,14 +19,14 @@ public class SaveLoad
 
     public void SaveList()
     {
+        Console.Clear();
         Console.WriteLine("Enter the name of the file to save the goals:");
         string fileName = Console.ReadLine();
         using (StreamWriter outputFile = new StreamWriter(fileName))
         {
             foreach (Goal goal in _file)
             {
-                outputFile.WriteLine(goal.ToString());
-                // saves the name.
+                outputFile.WriteLine(goal.GetGoal());
             }
         }
         Console.WriteLine("Goals saved to file successfully.");

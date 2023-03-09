@@ -27,7 +27,7 @@ class Program
                     RunLoadSaveChoice(userInput, goals);
                     break;
                 case "5": // Marks  a goal completed and add the points.
-
+                    
                     break;
                 case "6": // Quits the program.
                     Console.WriteLine("Thanks  for using our program!");
@@ -38,7 +38,7 @@ class Program
 
     public static string Menu(int totalPoints) // Displays the main menu.
     {
-        Console.WriteLine($"You have {totalPoints} points.");
+        Console.WriteLine($"You have {totalPoints} points.\n ");
         Console.WriteLine("Menu options:");
         Console.WriteLine("   1: Create new goal\n   2: List Goals\n   3: Save goals\n   4: Load goals\n   5: Record event \n   6: Quit");
         return Console.ReadLine();

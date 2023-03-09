@@ -77,9 +77,9 @@ public class Goal
         return _goal;
     }
 
-    public virtual int RecordEvent()
+    public virtual void RecordEvent()
     {
-        return _points;
+        _isComplete = true;
     }
 
     public virtual bool IsComplete()

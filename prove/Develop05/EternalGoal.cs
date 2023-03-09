@@ -11,9 +11,9 @@ public class EternalGoal : Goal
         return this._goal;
     }
 
-    public override int RecordEvent()
+    public override void RecordEvent()
     {
-        return _points;
+        _isComplete = true;  
     }
 
     public override bool IsComplete()

@@ -42,13 +42,13 @@ public class ChecklistGoal : Goal
         return _bonus;
     }
 
-    public override int RecordEvent()
+    public override void RecordEvent()
     {
-        return _points;
+        _isComplete = true;  
     }
 
     public override bool IsComplete()
     {
-        return true;
+        return _isComplete;
     }
 }
