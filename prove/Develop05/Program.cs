@@ -18,16 +18,16 @@ class Program
                     RunGoalChoice(choice, goals);
                     break;
                 case "2": // List Goals.
-                    RunLoadSaveChoice(userInput, goals);
+                    RunLoadSaveChoice(userInput, goals, totalPoints);
                     break;
                 case "3": // Save goals to a file.
-                    RunLoadSaveChoice(userInput, goals);
+                    RunLoadSaveChoice(userInput, goals, totalPoints);
                     break;
                 case "4": // Load goals from a file.
-                    RunLoadSaveChoice(userInput, goals);
+                    RunLoadSaveChoice(userInput, goals, totalPoints);
                     break;
                 case "5": // Marks  a goal completed and add the points.
-                    
+
                     break;
                 case "6": // Quits the program.
                     Console.WriteLine("Thanks  for using our program!");
@@ -80,25 +80,25 @@ class Program
         }
     }
 
-    public static void RunLoadSaveChoice(string userInput, List<Goal> goals) // Select base on the user input what goal to create.
+    public static void RunLoadSaveChoice(string userInput, List<Goal> goals, int totalPoints) // Select base on the user input what goal to create.
     {
         Console.Clear();
 
         if (userInput == "2")
         {
-            SaveLoad option1 = new SaveLoad(goals);
+            SaveLoad option1 = new SaveLoad(goals, totalPoints);
             option1.DisplayList();
             Console.WriteLine("Please enter any key to continue.");
             Console.ReadKey();
         }
         else if (userInput == "3")
         {
-            SaveLoad option2 = new SaveLoad(goals);
+            SaveLoad option2 = new SaveLoad(goals, totalPoints);
             option2.SaveList();
         }
         else if (userInput == "4")
         {
-            SaveLoad option3 = new SaveLoad(goals);
+            SaveLoad option3 = new SaveLoad(goals, totalPoints);
             goals = option3.LoadList();
         }
         else
