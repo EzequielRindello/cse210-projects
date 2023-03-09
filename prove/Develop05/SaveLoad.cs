@@ -13,10 +13,12 @@ public class SaveLoad
 
     public void DisplayList()
     {
+        int listNumber = 0;
         foreach (Goal s in _file)
         {
+            listNumber++;
             string goal = s.GetGoal();
-            Console.WriteLine(goal);
+            Console.WriteLine($"{listNumber}. [ ] {goal}");
         }
     }
 
