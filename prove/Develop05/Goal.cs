@@ -6,13 +6,13 @@ public class Goal
     protected bool _isComplete;
     protected string _goal;
 
-    public Goal(string name, string description, int points, bool isComplete, string goal)
+    public Goal()
     {
-        _name = name;
-        _description = description;
-        _points = points;
-        _isComplete = isComplete;
-        _goal = goal;
+        _name = "name";
+        _description = "description";
+        _points =0;
+        _isComplete = false;
+        _goal = "goal";
     }
 
     public string SetName()

@@ -1,6 +1,6 @@
 public class SimpleGoal : Goal
 {
-    public SimpleGoal(string name, string description, int points, bool isComplete, string goal) : base(name, description, points, isComplete, goal) { }
+    public SimpleGoal() : base() { }
 
     public override string SetGoal()
     {
