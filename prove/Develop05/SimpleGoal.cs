@@ -8,8 +8,6 @@ public class SimpleGoal : Goal
         this._description = SetDescription();
         this._points = SetPoints();
         this._goal = _name + " " + "(" + _description + ")" + " " + _points;
-        Console.WriteLine(_goal);
-        Thread.Sleep(3000);
         return this._goal;
     }
 
