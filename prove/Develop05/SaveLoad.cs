@@ -11,7 +11,7 @@ public class SaveLoad
     {
         foreach (Goal s in _file)
         {
-            string goal=s.GetGoal();
+            string goal = s.GetGoal();
             Console.WriteLine(goal);
         }
     }
@@ -32,8 +32,9 @@ public class SaveLoad
         Console.ReadKey();
     }
 
-    public void LoadList()
+    public List<Goal> LoadList()
     {
+        List<Goal> goals = new List<Goal>();
         Console.WriteLine("Enter the name of the file to load the goals:");
         string fileName = Console.ReadLine();
         using (StreamWriter outputFile = new StreamWriter(fileName))
@@ -46,5 +47,6 @@ public class SaveLoad
         Console.WriteLine("Load successfully.");
         Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
+        return goals;
     }
 }
