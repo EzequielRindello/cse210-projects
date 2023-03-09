@@ -9,7 +9,6 @@ public class SaveLoad
 
     public void DisplayList()
     {
-        // _file.ForEach(Console.WriteLine);
         foreach (Goal s in _file)
         {
             string goal=s.SetGoal();
