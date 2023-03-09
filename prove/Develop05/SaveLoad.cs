@@ -12,7 +12,8 @@ public class SaveLoad
         // _file.ForEach(Console.WriteLine);
         foreach (Goal s in _file)
         {
-            Console.WriteLine();
+            string goal=s.SetGoal();
+            Console.WriteLine(goal);
         }
     }
 

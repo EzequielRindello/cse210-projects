@@ -15,14 +15,19 @@ public class Goal
         _goal = goal;
     }
 
-    public string GetName()
+    public string SetName()
     {
         Console.WriteLine("What is the name of your goal?");
         string z = Console.ReadLine();
         return this._name = z;
     }
 
-    public string GetDescription()
+    public string GetName()
+    {
+        return _name;
+    }
+
+    public string SetDescription()
     {
         Console.WriteLine("What is a short description of your goal?");
         string z = Console.ReadLine();
@@ -30,14 +35,29 @@ public class Goal
 
     }
 
-    public int GetPoints()
+    public string GetDescription()
+    {
+        return _description;
+    }
+
+    public int SetPoints()
     {
         Console.WriteLine("what is the amount of points associated with your goal?");
         int z = int.Parse(Console.ReadLine());
         return this._points = z;
     }
 
-    public virtual string CreateGoal()
+    public int GetPoints()
+    {
+        return _points;
+    }
+
+    public virtual string SetGoal()
+    {
+        return _goal;
+    }
+
+    public string GetGoal()
     {
         return _goal;
     }

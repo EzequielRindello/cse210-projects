@@ -2,11 +2,11 @@ public class SimpleGoal : Goal
 {
     public SimpleGoal(string name, string description, int points, bool isComplete, string goal) : base(name, description, points, isComplete, goal) { }
 
-    public override string CreateGoal()
+    public override string SetGoal()
     {
-        this._name = GetName();
-        this._description = GetDescription();
-        this._points = GetPoints();
+        this._name = SetName();
+        this._description = SetDescription();
+        this._points = SetPoints();
         this._goal = _name + " " + "(" + _description + ")" + " " + _points;
         Console.WriteLine(_goal);
         Thread.Sleep(3000);

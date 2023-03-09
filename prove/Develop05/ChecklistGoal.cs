@@ -5,7 +5,7 @@ public class ChecklistGoal : Goal
 
     public ChecklistGoal(string name, string description, int points, bool isComplete, string goal, int howManyTimes , int bonus) : base(name, description, points, isComplete, goal) { }
 
-    public override string CreateGoal()
+    public override string SetGoal()
     {
         string x = "[ ]" + " " + _name + " " + "(" + _description + ")" + " " + _points;
         return this._goal = x;
