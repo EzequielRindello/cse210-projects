@@ -92,8 +92,4 @@ public class Goal
         Console.WriteLine($"{goalNumber}. {_name}");
     }
 
-    public virtual bool IsComplete()
-    {
-        return _isComplete;
-    }
 }

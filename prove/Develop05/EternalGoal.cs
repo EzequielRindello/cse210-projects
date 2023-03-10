@@ -13,6 +13,6 @@ public class EternalGoal : Goal
 
     public override void RecordEvent()
     {
-        _isComplete = true; // Never complete but you get the points.
+        _isComplete = true; 
     }
 }

@@ -30,21 +30,11 @@ public class ChecklistGoal : Goal
         return _howManyTimes;
     }
 
-    public int GetHowManyTimes()
-    {
-        return _howManyTimes;
-    }
-
     public int SetBonus()
     {
         Console.WriteLine("What is the bonus associated for this goal?");
         int z = Console.Read();
         this._bonus = z;
-        return _bonus;
-    }
-
-    public int GetBonus()
-    {
         return _bonus;
     }
 
@@ -65,8 +55,4 @@ public class ChecklistGoal : Goal
         Console.WriteLine($"{goalNumber}. [{checkString}] {_name} ({_description}) -----Currently complete {_currentTimes}/ {_howManyTimes}");
     }
 
-    public override bool IsComplete()
-    {
-        return _isComplete;
-    }
 }
