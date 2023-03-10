@@ -29,6 +29,7 @@ class Program
                     break;
                 case "5": 
                     /* I decided to do this here so I don't have to pass everything to a function with parameters*/
+                    Console.Clear();
                     Console.WriteLine("The goals are: ");
                     int sum = 0;
                     foreach (Goal goal in goals)
@@ -36,7 +37,7 @@ class Program
                         sum++;
                         goal.ShowGoalToDelete(sum);
                     }
-                    Console.Write("Which goal delete? ");
+                    Console.Write("Which goal you want to delete? ");
                     int input = int.Parse(Console.ReadLine());
                     Goal selectedGoal = goals[input - 1];
                     selectedGoal.RecordEvent();
