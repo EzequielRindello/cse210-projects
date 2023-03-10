@@ -43,6 +43,8 @@ class Program
                     totalPoints = totalPoints + selectedGoal.GetPoints();
                     SaveLoad  delete = new SaveLoad(goals, totalPoints);
                     delete.DeleteGoal(goals, selectedGoal);
+                    string Add=selectedGoal.GetGoal();
+                    goalsCompleted.Add(Add);
                     Console.WriteLine($"Congratulation you have earned {selectedGoal.GetPoints()}");
                     Console.WriteLine($"You now have {totalPoints}");
                     Console.ReadKey();
