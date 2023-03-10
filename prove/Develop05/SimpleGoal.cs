@@ -16,7 +16,7 @@ public class SimpleGoal : Goal
         _isComplete = true;  
     }
 
-    public override void ShowGoal(int goalNumber)
+    public override void Display(int goalNumber)
     {
         string checkString = " ";
         if (_isComplete)

@@ -27,8 +27,8 @@ public class SaveLoad
         foreach (Goal s in _file)
         {
             listNumber++;
-            string goal = s.Display();
-            Console.WriteLine($"{listNumber}. {goal}");
+            s.Display(listNumber);
+            
         }
     }
 

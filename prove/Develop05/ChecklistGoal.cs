@@ -52,7 +52,7 @@ public class ChecklistGoal : Goal
         }
     }
 
-    public override void ShowGoal(int goalNumber)
+    public override void Display(int goalNumber)
     {
         string checkString = " ";
         if (_isComplete)
