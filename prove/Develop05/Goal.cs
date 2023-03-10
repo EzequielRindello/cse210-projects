@@ -10,7 +10,7 @@ public class Goal
     {
         _name = "name";
         _description = "description";
-        _points =0;
+        _points = 0;
         _isComplete = false;
         _goal = "goal";
     }
@@ -85,6 +85,16 @@ public class Goal
     public virtual void RecordEvent()
     {
         _isComplete = true;
+    }
+
+    public virtual void ShowGoal(int goalNumber)
+    {
+        Console.WriteLine($"{goalNumber}. [ ] {_name} ({_description} )");
+    }
+
+    public virtual void ShowGoalSimple(int goalNumber)
+    {
+        Console.WriteLine($"{goalNumber}. {_name}");
     }
 
     public virtual bool IsComplete()

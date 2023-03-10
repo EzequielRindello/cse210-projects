@@ -28,6 +28,11 @@ class Program
                     break;
                 case "5": // Marks  a goal completed and add the points.
 
+                    Console.Write("Which goal would you like to record? ");
+                    int input = int.Parse(Console.ReadLine());
+                    Goal selectedGoal = goals[input - 1];
+                    Console.WriteLine($"You now have {totalPoints}");
+                    Console.WriteLine("");
                     break;
                 case "6": // Quits the program.
                     Console.WriteLine("Thanks  for using our program!");
@@ -57,19 +62,19 @@ class Program
 
         if (userInput == "1")
         {
-            Goal goal1 = new SimpleGoal();
+            Goal goal1 = new SimpleGoal("", "", 0, false);
             goal1.SetGoal();
             goals.Add(goal1);
         }
         else if (userInput == "2")
         {
-            Goal goal2 = new EternalGoal();
+            Goal goal2 = new EternalGoal("", "", 0, false);
             goal2.SetGoal();
             goals.Add(goal2);
         }
         else if (userInput == "3")
         {
-            Goal goal3 = new ChecklistGoal();
+            Goal goal3 = new ChecklistGoal("", "", 0, false, 0, 0, 0);
             goal3.SetGoal();
             goals.Add(goal3);
         }
@@ -94,12 +99,22 @@ class Program
         else if (userInput == "3")
         {
             SaveLoad option2 = new SaveLoad(goals, totalPoints);
-            option2.SaveList();
+            option2.SaveList(goals, totalPoints);
         }
         else if (userInput == "4")
         {
             SaveLoad option3 = new SaveLoad(goals, totalPoints);
-            //option3.LoadList();
+            option3.LoadList();
+        }
+        else if (userInput == "5")
+        {
+            SaveLoad option4 = new SaveLoad(goals, totalPoints);
+            option4.DisplayList();
+            Console.Write("Which goal would you like to record? ");
+            int input = int.Parse(Console.ReadLine());
+            Goal selectedGoal = goals[input - 1];
+            Console.WriteLine($"You now have {totalPoints}");
+            Console.WriteLine("");
         }
         else
         {

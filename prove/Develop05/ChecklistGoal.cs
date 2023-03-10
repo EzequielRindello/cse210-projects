@@ -3,7 +3,7 @@ public class ChecklistGoal : Goal
     private int _howManyTimes;
     private int _bonus;
 
-    public ChecklistGoal() : base() { }
+    public ChecklistGoal(string name, string description, int points,bool isComplete, int currentCount, int howManyTimes, int bonus) : base() { }
 
     public override string SetGoal()
     {

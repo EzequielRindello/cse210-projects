@@ -1,6 +1,6 @@
 public class SimpleGoal : Goal
 {
-    public SimpleGoal() : base() { }
+    public SimpleGoal(string name, string description, int points, bool isComplete) : base() { }
 
     public override string SetGoal()
     {
@@ -16,8 +16,11 @@ public class SimpleGoal : Goal
         _isComplete = true;
     }
 
-    public override bool IsComplete()
+    public override void ShowGoal(int goalNumber)
     {
-        return true;
+        string checkString = " ";
+        if (_isComplete)
+            checkString = "X";
+        Console.WriteLine($"{goalNumber}. [{checkString}] {_name} ({_description} )");
     }
 }

@@ -1,6 +1,6 @@
 public class EternalGoal : Goal
 {
-    public EternalGoal() : base() { }
+    public EternalGoal(string name, string description, int points, bool isComplete) : base() { }
 
     public override string SetGoal()
     {

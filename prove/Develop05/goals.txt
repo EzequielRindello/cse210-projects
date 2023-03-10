@@ -1,2 +1,2 @@
-Iglesia,Ir a la iglesia,100,False
-Templo,Asisitir regularmente al templo,1000,False
+0
+Templo,Ir al templo,10,False
