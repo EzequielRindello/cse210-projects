@@ -101,6 +101,8 @@ class Program
         {
             SaveLoad option3 = new SaveLoad(goals, totalPoints);
             option3.LoadList();
+            goals = option3.GetGoals();
+            totalPoints = option3.GetPoints();
         }
         else if (userInput == "5")
         {
