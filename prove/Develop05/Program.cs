@@ -27,12 +27,7 @@ class Program
                     RunLoadSaveChoice(userInput, goals, totalPoints);
                     break;
                 case "5": // Marks  a goal completed and add the points.
-
-                    Console.Write("Which goal would you like to record? ");
-                    int input = int.Parse(Console.ReadLine());
-                    Goal selectedGoal = goals[input - 1];
-                    Console.WriteLine($"You now have {totalPoints}");
-                    Console.WriteLine("");
+                    RunLoadSaveChoice(userInput, goals, totalPoints);
                     break;
                 case "6": // Quits the program.
                     Console.WriteLine("Thanks  for using our program!");
