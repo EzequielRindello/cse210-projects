@@ -27,8 +27,8 @@ class Program
                 case "4": // Load goals from a file.
                     RunLoadSaveChoice(userInput, goals, totalPoints);
                     break;
-                case "5": 
-                    /* I decided to do this here so I don't have to pass everything to a function with parameters*/
+                case "5":
+                    /* I decided to do this here so I don't have to pass everything to a function/method with parameters*/
                     Console.Clear();
                     Console.WriteLine("The goals are: ");
                     int sum = 0;
@@ -42,15 +42,16 @@ class Program
                     Goal selectedGoal = goals[input - 1];
                     selectedGoal.RecordEvent();
                     totalPoints = totalPoints + selectedGoal.GetPoints();
-                    SaveLoad  delete = new SaveLoad(goals, totalPoints);
+                    SaveLoad delete = new SaveLoad(goals, totalPoints);
                     delete.DeleteGoal(goals, selectedGoal);
-                    string Add=selectedGoal.GetGoal();
+                    string Add = selectedGoal.GetGoal();
+                    SaveGoalsCompleted(goalsCompleted);
                     goalsCompleted.Add(Add);
-                    Console.WriteLine($"Congratulation you have earned {selectedGoal.GetPoints()}");
-                    Console.WriteLine($"You now have {totalPoints}");
+                    Console.WriteLine($"You now have {totalPoints} points!");
                     Console.ReadKey();
                     break;
                 case "6":
+                    goalsCompleted = LoadGoalsCompleted();
                     break;
                 case "7": // Quits the program.
                     Console.WriteLine("Thanks  for using our program!");
@@ -131,5 +132,32 @@ class Program
             Console.WriteLine("Error.");
             Thread.Sleep(2000);
         }
+    }
+
+    public static void SaveGoalsCompleted(List<string> goalsCompleted)
+    {
+        File.WriteAllLines("completedgoals.txt", goalsCompleted);
+    }
+
+    public static List<string> LoadGoalsCompleted()
+    {
+        string[] lines = File.ReadAllLines("completedgoals.txt");
+        List<string> myList = new List<string>();
+
+        foreach (string line in lines)
+        {
+            myList.Add(line);
+        }
+
+        return myList;
+    }
+
+    public static void Displays(List<string> goalsCompleted)
+    {
+        foreach (string item in goalsCompleted)
+        {
+            Console.WriteLine(item);
+        }
+        Console.ReadKey();
     }
 }

@@ -1,4 +1,1 @@
-0
-SimpleGoal,bici,andar en bici,45,False
-SimpleGoal,iglsia,asisitir,100,False
-EternalGoal,templo,ir al templo,10,False
+1109
