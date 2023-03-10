@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         List<Goal> goals = new List<Goal>(); // List to store/load goals entered.
+        List<string> goalsCompleted = new List<string>();
         int totalPoints = 0;
 
         while (true) // Loop with a switch that takes input from the user to select a choice from the menu.
