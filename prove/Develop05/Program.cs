@@ -27,8 +27,25 @@ class Program
                 case "4": // Load goals from a file.
                     RunLoadSaveChoice(userInput, goals, totalPoints);
                     break;
-                case "5": // Marks  a goal completed and add the points.
-                    RunLoadSaveChoice(userInput, goals, totalPoints);
+                case "5": 
+                    /* I decided to do this here so I don't have to pass everything to a function with parameters*/
+                    Console.WriteLine("The goals are: ");
+                    int sum = 0;
+                    foreach (Goal goal in goals)
+                    {
+                        sum++;
+                        goal.ShowGoalToDelete(sum);
+                    }
+                    Console.Write("Which goal delete? ");
+                    int input = int.Parse(Console.ReadLine());
+                    Goal selectedGoal = goals[input - 1];
+                    selectedGoal.RecordEvent();
+                    totalPoints = totalPoints + selectedGoal.GetPoints();
+                    SaveLoad  delete = new SaveLoad(goals, totalPoints);
+                    delete.DeleteGoal(goals, selectedGoal);
+                    Console.WriteLine($"Congratulation you have earned {selectedGoal.GetPoints()}");
+                    Console.WriteLine($"You now have {totalPoints}");
+                    Console.ReadKey();
                     break;
                 case "6": // Quits the program.
                     Console.WriteLine("Thanks  for using our program!");
@@ -103,22 +120,6 @@ class Program
             option3.LoadList();
             goals = option3.GetGoals();
             totalPoints = option3.GetPoints();
-        }
-        else if (userInput == "5")
-        {
-            SaveLoad option4 = new SaveLoad(goals, totalPoints);
-            Console.WriteLine("The goals are: ");
-            int x = 0;
-            foreach (Goal goal in goals)
-            {
-                x++;
-                goal.ShowGoalSimple(x);
-            }
-            Console.Write("Which goal have you complete? ");
-            int input = int.Parse(Console.ReadLine());
-            Goal selectedGoal = goals[input - 1];
-            selectedGoal.RecordEvent();
-            totalPoints = totalPoints + selectedGoal.GetPoints();
         }
         else
         {

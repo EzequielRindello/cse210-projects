@@ -1,6 +1,6 @@
 public class SimpleGoal : Goal
 {
-    public SimpleGoal(string name, string description, int points, bool isComplete) : base() { }
+    public SimpleGoal(string name, string description, int points, bool isComplete) : base() {_isComplete = false;}
 
     public override string SetGoal()
     {

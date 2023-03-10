@@ -4,7 +4,12 @@ public class ChecklistGoal : Goal
     private int _currentTimes;
     private int _bonus;
 
-    public ChecklistGoal(string name, string description, int points, bool isComplete, int currentCount, int howManyTimes, int bonus) : base() { }
+    public ChecklistGoal(string name, string description, int points, bool isComplete, int currentCount, int howManyTimes, int bonus) : base()
+    {
+        _isComplete = false;
+        _currentTimes = 0;
+        _bonus = 0;
+    }
 
     public override string SetGoal()
     {
@@ -59,7 +64,7 @@ public class ChecklistGoal : Goal
             checkString = "X";
         Console.WriteLine($"{goalNumber}. [{checkString}] {_name} ({_description}) -----Currently complete {_currentTimes}/ {_howManyTimes}");
     }
-    
+
     public override bool IsComplete()
     {
         return _isComplete;

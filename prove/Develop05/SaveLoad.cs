@@ -16,6 +16,11 @@ public class SaveLoad
         return _file;
     }
 
+    public void DeleteGoal(List<Goal> goals, Goal goalToDelete)
+    {
+        goals.Remove(goalToDelete);
+    }
+    
     public int GetPoints()
     {
         return _points;
@@ -28,7 +33,7 @@ public class SaveLoad
         {
             listNumber++;
             s.Display(listNumber);
-            
+
         }
     }
 
