@@ -1,2 +1,3 @@
 0
-Templo,Ir al templo,10,False
+EternalGoal,Templo,asisirtir al templo,1000,False
+SimpleGoal,Correr,salir por las mañanas a correr,500,False

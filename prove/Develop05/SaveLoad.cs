@@ -29,9 +29,9 @@ public class SaveLoad
         string fileName = Console.ReadLine();
         using (StreamWriter outputFile = new StreamWriter(fileName))
         {
+            outputFile.WriteLine(points);
             foreach (Goal goal in _file)
             {
-                outputFile.WriteLine(points);
                 outputFile.WriteLine(goal.GetGoal());
             }
         }
