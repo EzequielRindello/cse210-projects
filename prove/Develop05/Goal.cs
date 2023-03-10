@@ -77,17 +77,12 @@ public class Goal
         return _goal;
     }
 
-    public string Display()
-    {
-        return $"[ ] {_name} ({_description} )";
-    }
-
     public virtual void RecordEvent()
     {
         _isComplete = true;
     }
 
-    public virtual void ShowGoal(int goalNumber)
+    public virtual void Display(int goalNumber)
     {
         Console.WriteLine($"{goalNumber}. [ ] {_name} ({_description} )");
     }
