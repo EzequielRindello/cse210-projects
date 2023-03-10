@@ -105,11 +105,11 @@ class Program
         {
             SaveLoad option4 = new SaveLoad(goals, totalPoints);
             option4.DisplayList();
-            Console.Write("Which goal would you like to record? ");
+            Console.Write("Which goal have you complete? ");
             int input = int.Parse(Console.ReadLine());
             Goal selectedGoal = goals[input - 1];
-            Console.WriteLine($"You now have {totalPoints}");
-            Console.WriteLine("");
+            selectedGoal.RecordEvent();
+            totalPoints = totalPoints + selectedGoal.GetPoints();
         }
         else
         {
