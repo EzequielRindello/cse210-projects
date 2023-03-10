@@ -71,17 +71,17 @@ public class SaveLoad
                 string goalType = goalLines[0];
                 if (goalType == "SimpleGoal")
                 {
-                    Goal goal = new SimpleGoal(goalLines[1], goalLines[2], int.Parse(goalLines[3]), bool.Parse(goalLines[4]));
+                    SimpleGoal goal = new SimpleGoal(goalLines[1], goalLines[2], int.Parse(goalLines[3]), bool.Parse(goalLines[4]));
                     _file.Add(goal);
                 }
                 if (goalType == "EternalGoal")
                 {
-                    Goal goal = new EternalGoal(goalLines[1], goalLines[2], int.Parse(goalLines[3]), bool.Parse(goalLines[4]));
+                    EternalGoal goal = new EternalGoal(goalLines[1], goalLines[2], int.Parse(goalLines[3]), bool.Parse(goalLines[4]));
                     _file.Add(goal);
                 }
                 if (goalType == "ChecklistGoal")
                 {
-                    Goal goal = new ChecklistGoal(goalLines[1], goalLines[2], int.Parse(goalLines[3]), bool.Parse(goalLines[4]), int.Parse(goalLines[5]), int.Parse(goalLines[6]), int.Parse(goalLines[7]));
+                    ChecklistGoal goal = new ChecklistGoal(goalLines[1], goalLines[2], int.Parse(goalLines[3]), bool.Parse(goalLines[4]), int.Parse(goalLines[5]), int.Parse(goalLines[6]), int.Parse(goalLines[7]));
                     _file.Add(goal);
                 }
                 line = outputFile.ReadLine();
