@@ -7,13 +7,13 @@ public class SimpleGoal : Goal
         this._name = SetName();
         this._description = SetDescription();
         this._points = SetPoints();
-        this._goal = $"{_name},{_description},{_points},{_isComplete}";
+        this._goal = $"SimpleGoal,{_name},{_description},{_points},{_isComplete}";
         return this._goal;
     }
 
     public override void RecordEvent()
     {
-        _isComplete = true;
+        _isComplete = true;  
     }
 
     public override void ShowGoal(int goalNumber)

@@ -7,17 +7,12 @@ public class EternalGoal : Goal
         this._name = SetName();
         this._description = SetDescription();
         this._points = SetPoints();
-        this._goal = $"{_name},{_description},{_points},{_isComplete}";
+        this._goal = $"EternalGoal,{_name},{_description},{_points},{_isComplete}";
         return this._goal;
     }
 
     public override void RecordEvent()
     {
-        _isComplete = true;
-    }
-
-    public override bool IsComplete()
-    {
-        return true;
+        _isComplete = true; // Never complete but you get the points.
     }
 }
