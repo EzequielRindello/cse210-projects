@@ -107,7 +107,13 @@ class Program
         else if (userInput == "5")
         {
             SaveLoad option4 = new SaveLoad(goals, totalPoints);
-            option4.DisplayList();
+            Console.WriteLine("The goals are: ");
+            int x = 0;
+            foreach (Goal goal in goals)
+            {
+                x++;
+                goal.ShowGoalSimple(x);
+            }
             Console.Write("Which goal have you complete? ");
             int input = int.Parse(Console.ReadLine());
             Goal selectedGoal = goals[input - 1];
