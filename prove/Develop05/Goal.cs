@@ -87,7 +87,7 @@ public class Goal
         Console.WriteLine($"{goalNumber}. [ ] {_name} ({_description} )");
     }
 
-    public virtual void ShowGoalSimple(int goalNumber)
+    public virtual void ShowGoalToDelete(int goalNumber)
     {
         Console.WriteLine($"{goalNumber}. {_name}");
     }
