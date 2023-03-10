@@ -11,6 +11,16 @@ public class SaveLoad
         this._points = totalPoints;
     }
 
+    public List<Goal> GetGoals()
+    {
+        return _file;
+    }
+
+    public int GetPoints()
+    {
+        return _points;
+    }
+
     public void DisplayList()
     {
         int listNumber = 0;
@@ -70,7 +80,7 @@ public class SaveLoad
                     _file.Add(goal);
                 }
                 line = outputFile.ReadLine();
-            }
+            };
         }
     }
 }

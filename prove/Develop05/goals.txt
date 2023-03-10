@@ -1,3 +1,4 @@
 0
-EternalGoal,Templo,asisirtir al templo,1000,False
-SimpleGoal,Correr,salir por las mañanas a correr,500,False
+SimpleGoal,bici,andar en bici,45,False
+SimpleGoal,iglsia,asisitir,100,False
+EternalGoal,templo,ir al templo,10,False
