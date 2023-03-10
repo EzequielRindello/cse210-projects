@@ -37,7 +37,7 @@ class Program
                         sum++;
                         goal.ShowGoalToDelete(sum);
                     }
-                    Console.Write("Which goal you want to delete? ");
+                    Console.Write("Which goal you want to delete and add as complete? ");
                     int input = int.Parse(Console.ReadLine());
                     Goal selectedGoal = goals[input - 1];
                     selectedGoal.RecordEvent();
@@ -50,7 +50,9 @@ class Program
                     Console.WriteLine($"You now have {totalPoints}");
                     Console.ReadKey();
                     break;
-                case "6": // Quits the program.
+                case "6":
+                    break;
+                case "7": // Quits the program.
                     Console.WriteLine("Thanks  for using our program!");
                     return;
             }
@@ -61,7 +63,7 @@ class Program
     {
         Console.WriteLine($"You have {totalPoints} points.\n ");
         Console.WriteLine("Menu options:");
-        Console.WriteLine("   1: Create new goal\n   2: List Goals\n   3: Save goals\n   4: Load goals\n   5: Record event \n   6: Quit");
+        Console.WriteLine("   1: Create new goal\n   2: List Goals\n   3: Save goals\n   4: Load goals\n   5: Record event \n   6: Show completed goals\n   7: Quit");
         return Console.ReadLine();
     }
 
