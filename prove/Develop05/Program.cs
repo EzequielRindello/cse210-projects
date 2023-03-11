@@ -28,7 +28,7 @@ class Program
                 case "4": // Load goals from a file.
                     RunLoadSaveChoice(userInput, goals, totalPoints);
                     break;
-                case "5":
+                case "5": // Record goals completed.
                     /* I decided to do this here so I don't have to pass everything to a function/method with parameters*/
                     Console.Clear();
                     Console.WriteLine("The goals are: ");
@@ -51,7 +51,7 @@ class Program
                     Console.WriteLine($"You now have {totalPoints} points!");
                     Console.ReadKey();
                     break;
-                case "6":
+                case "6": // Shows creativity and exceeds core requirements.
                     /* I decided to do this here so I don't have to pass everything to a function/method with parameters*/
                     Displays(goalsCompleted);
                     Console.WriteLine("Which goal you want to delete and add as to the complete goal file? ");
