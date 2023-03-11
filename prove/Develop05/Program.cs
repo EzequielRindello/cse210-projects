@@ -38,13 +38,11 @@ class Program
                         sum++;
                         goal.ShowGoalToDelete(sum);
                     }
-                    Console.Write("Which goal you want to delete and add as complete? ");
+                    Console.WriteLine("Which goal you want to mark as complete? ");
                     int input = int.Parse(Console.ReadLine());
                     Goal selectedGoal = goals[input - 1];
                     selectedGoal.RecordEvent();
                     totalPoints = totalPoints + selectedGoal.GetPoints();
-                    SaveLoad delete = new SaveLoad(goals, totalPoints);
-                    delete.DeleteGoal(goals, selectedGoal);
                     string uno = selectedGoal.GetName();
                     string dos = selectedGoal.GetDescription();
                     string nashe = uno + " " + dos;
@@ -54,7 +52,19 @@ class Program
                     Console.ReadKey();
                     break;
                 case "6":
+                    /* I decided to do this here so I don't have to pass everything to a function/method with parameters*/
                     Displays(goalsCompleted);
+                    Console.WriteLine("Which goal you want to delete and add as to the complete goal file? ");
+                    int sum2 = 0;
+                    foreach (Goal goal in goals)
+                    {
+                        sum2++;
+                        goal.ShowGoalToDelete(sum2);
+                    }
+                    int input2 = int.Parse(Console.ReadLine());
+                    Goal selectedGoal2 = goals[input2 - 1];
+                    SaveLoad delete = new SaveLoad(goals, totalPoints);
+                    delete.DeleteGoal(goals, selectedGoal2);
                     break;
                 case "7": // Quits the program.
                     Console.WriteLine("Thanks  for using our program!");
@@ -157,10 +167,13 @@ class Program
 
     public static void Displays(List<string> goalsCompleted)
     {
+        Console.Clear();
+        Console.WriteLine("Metas guardadas: \n");
         foreach (string item in goalsCompleted)
         {
             Console.WriteLine(item);
         }
+        Console.WriteLine("Enter any key to continue.");
         Console.ReadKey();
     }
 }
