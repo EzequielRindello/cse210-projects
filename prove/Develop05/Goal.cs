@@ -8,11 +8,11 @@ public class Goal
 
     public Goal()
     {
-        _name = "name";
-        _description = "description";
+        _name = "";
+        _description = "";
         _points = 0;
         _isComplete = false;
-        _goal = "goal";
+        _goal = "";
     }
 
     public string SetName()
