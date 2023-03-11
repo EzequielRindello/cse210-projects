@@ -17,22 +17,16 @@ public class ChecklistGoal : Goal
 
     public override string SetGoal()
     {
-        SetBonus();
         string x = $"ChecklistGoal,{_name},{_description},{_points},{_isComplete},{_currentTimes},{_howManyTimes},{_bonus}";
         return this._goal = x;
     }
 
     public void SetBonus()
     {
-        this._name = SetName();
-        this._description = SetDescription();
-        this._points = SetPoints();
-        Console.WriteLine("What is the bonus associated for this goal?");
-        int za = Console.Read();
-        this._bonus = za;
-        Console.WriteLine("How many times do you have to complete this goal to get the bonus?");
-        int z = Console.Read();
-        this._howManyTimes = z;
+        Console.WriteLine("How many times does this goal need to be accomplished for a bonus? ");
+        _howManyTimes = int.Parse(Console.ReadLine());
+        Console.WriteLine("What is the bonus for accomplishing it that many times? ");
+        _bonus = int.Parse(Console.ReadLine());
     }
 
     public override void RecordEvent()

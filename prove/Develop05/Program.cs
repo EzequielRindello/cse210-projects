@@ -106,7 +106,11 @@ class Program
         }
         else if (userInput == "3")
         {
-            Goal goal3 = new ChecklistGoal("", "", 0, false, 0, 0, 0);
+            ChecklistGoal goal3 = new ChecklistGoal("", "", 0, false, 0, 0, 0);
+            goal3.SetName();
+            goal3.SetDescription();
+            goal3.SetPoints();
+            goal3.SetBonus();
             goal3.SetGoal();
             goals.Add(goal3);
         }
