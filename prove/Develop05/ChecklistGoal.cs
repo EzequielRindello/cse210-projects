@@ -6,6 +6,9 @@ public class ChecklistGoal : Goal
 
     public ChecklistGoal(string name, string description, int points, bool isComplete, int currentCount, int howManyTimes, int bonus) : base()
     {
+        _name = name;
+        _description = description;
+        _points = points;
         _isComplete = false;
         _howManyTimes = 0;
         _currentTimes = 0;
