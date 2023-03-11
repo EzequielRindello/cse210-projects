@@ -22,14 +22,6 @@ public class ChecklistGoal : Goal
         return this._goal = x;
     }
 
-    public int SetHowManyTimes()
-    {
-        Console.WriteLine("How many times do you have to complete this goal to get the bonus?");
-        int z = Console.Read();
-        this._howManyTimes = z;
-        return _howManyTimes;
-    }
-
     public void SetBonus()
     {
         Console.WriteLine("What is the bonus associated for this goal?");
